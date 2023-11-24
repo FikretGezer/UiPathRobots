@@ -14,13 +14,13 @@ using UiPath.UIAutomationNext.API.Models;
 using UiPath.UIAutomationNext.Enums;
 using UiPath.CodedWorkflows.DescriptorIntegration;
 
-namespace Robot5_PDFDataScraping
+namespace Robot6_OpticalCharacterRecognition
 {
     public partial class CodedWorkflow : CodedWorkflowBase
     {
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService)};
+            _ = new System.Type[]{typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService), typeof(UiPath.Core.Activities.API.ISystemService)};
         }
 
         protected UiPath.Core.Activities.API.ISystemService system { get => serviceContainer.Resolve<UiPath.Core.Activities.API.ISystemService>(); }
@@ -31,14 +31,14 @@ namespace Robot5_PDFDataScraping
     }
 }
 
-namespace Robot5_PDFDataScraping.ObjectRepository
+namespace Robot6_OpticalCharacterRecognition.ObjectRepository
 {
     public static class Descriptors
     {
     }
 }
 
-namespace Robot5_PDFDataScraping._Implementation
+namespace Robot6_OpticalCharacterRecognition._Implementation
 {
     internal class ScreenDescriptorDefinition : IScreenDescriptorDefinition
     {
