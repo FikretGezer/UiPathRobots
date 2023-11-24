@@ -11,7 +11,21 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "dt_New&Sequence_1",
+        "currentTimeForFile&Sequence_1",
+        "summedSaleAmount&Sequence_1",
+        "extractedSaleAmount&Sequence_2",
+        "collectionOfCurrency&Sequence_2",
+        "collectionOfDate&Sequence_2",
+        "collectionOfID&Sequence_2",
+        "extractedFormattedDate&Sequence_2",
+        "extractedDate&Sequence_2",
+        "extractedReceiptID&Sequence_2",
+        "extractedTrxID&Sequence_2",
+        "extractedPDF&Sequence_2",
+        "scrapedTotal&Sequence_7"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

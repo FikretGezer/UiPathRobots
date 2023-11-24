@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1105,2747" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1105,3850</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -45,6 +53,11 @@
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Core.Activities.TextModifications</x:String>
       <x:String>UiPath.Activities.System.Workflow.Business</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -111,27 +124,30 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="630,2682" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="688,3785" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Double" Name="summedSaleAmount">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Double" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Double" Default="0" Name="summedSaleAmount" />
       <Variable x:TypeArguments="x:String" Name="currentTimeForFile">
         <Variable.Default>
           <Literal x:TypeArguments="x:String" Value="" />
         </Variable.Default>
       </Variable>
+      <Variable x:TypeArguments="sd2:DataTable" Name="dt_New" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Assign the time stamp for file that will be created" sap:VirtualizedContainerService.HintSize="568,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+    <Assign DisplayName="Assign the time stamp for file that will be created" sap:VirtualizedContainerService.HintSize="626,82" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[currentTimeForFile]</OutArgument>
       </Assign.To>
@@ -139,7 +155,8 @@
         <InArgument x:TypeArguments="x:String">["Receipt Scraped Output @" + DateTime.Now.ToString("dMMMMyyyy-HHmmss")]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachFileX DisplayName="Get All Receipt Files" Filter="*.pdf" Folder="ScannedReceipts" sap:VirtualizedContainerService.HintSize="568,2324" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+    <ui:BuildDataTable DataTable="[dt_New]" DisplayName="Create The Data Table " sap:VirtualizedContainerService.HintSize="626,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Receipt_x0020_ID&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:dateTime&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Sales_x0020_Amount&quot; msdata:Caption=&quot;&quot; type=&quot;xs:double&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Sum&quot; msdata:Caption=&quot;&quot; type=&quot;xs:double&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ForEachFileX DisplayName="Get All Receipt Files" Filter="*.pdf" Folder="ScannedReceipts" sap:VirtualizedContainerService.HintSize="626,2550" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
       <ui:ForEachFileX.Body>
         <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
           <ActivityAction.Argument1>
@@ -148,9 +165,9 @@
           <ActivityAction.Argument2>
             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
           </ActivityAction.Argument2>
-          <TryCatch DisplayName="Try Reading Current Receipt" sap:VirtualizedContainerService.HintSize="534,2066" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Reading Current Receipt" sap:VirtualizedContainerService.HintSize="534,2292" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <TryCatch.Try>
-              <Sequence DisplayName="Read Receipt" sap:VirtualizedContainerService.HintSize="496,1838" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Read Receipt" sap:VirtualizedContainerService.HintSize="496,2064" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="extractedPDF" />
                   <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="collectionOfID" />
@@ -248,6 +265,7 @@
                 </Assign>
                 <ui:AppendLine File="{x:Null}" DisplayName="Create and Save Scraped Receipt in New Text File" FileName="[currentTimeForFile+&quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="434,133" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[&quot;Receipt ID: &quot; + extractedReceiptID + &quot; | Date: &quot; + extractedFormattedDate.ToString(&quot;d MMMM yyyy&quot;) + &quot; | Sales Amount: $&quot; + extractedSaleAmount.ToString + &quot; | Sum: $&quot; + summedSaleAmount.ToString]" UseDefaultEncoding="False" />
                 <ui:LogMessage DisplayName="Log Successful" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;Receipt Successfully Scraped, ID: &quot; + extractedReceiptID]" />
+                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[new Object(){extractedReceiptID, extractedFormattedDate, extractedSaleAmount, summedSaleAmount}]" DataTable="[dt_New]" DisplayName="Add Data to the Data Table" sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                 <ui:CommentOut DisplayName="Long version of reading receipt" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                   <ui:CommentOut.Body>
                     <Sequence DisplayName="Ignored Opening with Source" sap:VirtualizedContainerService.HintSize="546,1055" sap2010:WorkflowViewState.IdRef="Sequence_6">
@@ -343,6 +361,39 @@
         </ActivityAction>
       </ui:ForEachFileX.Body>
     </ui:ForEachFileX>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Show Total Sales Amount" sap:VirtualizedContainerService.HintSize="568,85" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[summedSaleAmount.ToString]" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Writing Data Table to An Excel File" sap:VirtualizedContainerService.HintSize="626,737" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Writing Actual" sap:VirtualizedContainerService.HintSize="592,650" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Create a new file" sap:VirtualizedContainerService.HintSize="530,539" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="[currentTimeForFile + &quot;.xlsx&quot;]">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Write Data Table" sap:VirtualizedContainerService.HintSize="496,270" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Sayfa1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dt_New]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Show Total Sales Amount" sap:VirtualizedContainerService.HintSize="626,85" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[summedSaleAmount.ToString]" />
   </Sequence>
 </Activity>
