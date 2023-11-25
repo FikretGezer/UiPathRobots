@@ -1,0 +1,45 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "EmailOperationsTraining.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "replacedMail&Sequence_1",
+        "str_OutputReport&Sequence_1",
+        "textFile&Sequence_1",
+        "list_OutputReport&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ActualEmailOperations.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "mailStructure&Sequence_1",
+        "StringOutputReport&Sequence_1",
+        "list_OutputReport&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
