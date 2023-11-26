@@ -11,8 +11,12 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "apiKey&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "messageForTheWorld"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
