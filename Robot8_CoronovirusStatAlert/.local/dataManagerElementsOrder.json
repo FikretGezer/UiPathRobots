@@ -11,7 +11,21 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "listOfEmails&Sequence_1",
+        "countryCovStats&Sequence_1",
+        "dt_deneme&Sequence_2",
+        "country&Sequence_2",
+        "deaths&Sequence_2",
+        "dt_OutputStats&Sequence_1",
+        "dt_CoronovirusStats&Sequence_1",
+        "totalRecovered&Sequence_2",
+        "newDeaths&Sequence_2",
+        "totalDeaths&Sequence_2",
+        "newCases&Sequence_2",
+        "totalCases&Sequence_2",
+        "countryToSearch&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

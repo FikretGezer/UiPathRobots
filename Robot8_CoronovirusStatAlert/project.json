@@ -1,7 +1,7 @@
 {
   "name": "Robot8_CoronovirusStatAlert",
   "projectId": "0d155dba-b6d5-49c5-afb5-44ea36c0e872",
-  "description": "Gets coronovirus cases data from https://www.worldometers.info/coronavirus/ and writes that data on an Excel file and send it to people through email.",
+  "description": "Gets coronovirus cases data from https://www.worldometers.info/coronavirus/ and sends this data to list of people through email.",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.2]",

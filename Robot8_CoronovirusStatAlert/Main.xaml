@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1105,4112" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -25,6 +25,29 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -53,13 +76,264 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="668,4047" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="countryToSearch" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_CoronovirusStats" />
+      <Variable x:TypeArguments="x:String" Name="dt_OutputStats" />
+      <Variable x:TypeArguments="x:String" Name="countryCovStats" />
+      <Variable x:TypeArguments="s:String[]" Name="listOfEmails" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[dt_CoronovirusStats]" DisplayName="Build Coronovirus Stats Data Table" sap:VirtualizedContainerService.HintSize="606,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Country&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Total_x0020_Cases&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;New_x0020_Cases&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Total_x0020_Deaths&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;New_x0020_Deaths&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Total_x0020_Recoverd&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Get Country to Search For" sap:VirtualizedContainerService.HintSize="606,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter a Country Name" Title="Country">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[countryToSearch]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Open Stats Website" sap:VirtualizedContainerService.HintSize="606,1998" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="True" OpenMode="Always" ScopeGuid="b454b321-bd4d-401d-84e2-72c0d8a44eac" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Perform Operations" sap:VirtualizedContainerService.HintSize="450,1741" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="totalCases" />
+              <Variable x:TypeArguments="x:String" Name="newCases" />
+              <Variable x:TypeArguments="x:String" Name="totalDeaths" />
+              <Variable x:TypeArguments="x:String" Name="newDeaths" />
+              <Variable x:TypeArguments="x:String" Name="totalRecovered" />
+              <Variable x:TypeArguments="x:String" Name="deaths" />
+              <Variable x:TypeArguments="x:String" Name="country" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dt_deneme" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Search country" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="b454b321-bd4d-401d-84e2-72c0d8a44eac" Text="[countryToSearch.ToString]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.worldometers.info/coronavirus/" CvElementArea="1032, 389, 233, 33" CvType="InputBox" DesignTimeRectangle="1034, 390, 229, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='search' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='search' class='form-control input-sm' aaname='' /&gt;" Guid="2f35d8bf-1a97-4630-b039-d17e0efd71f7" InformativeScreenshot="90b54e5ec02f5a207c74cb34b721c41a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='COVID - Coronavirus Statistics - Worldometer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvElementArea="1032, 389, 233, 33" CvTextArea="973, 396, 53, 14" CvTextArgument="Search:" CvType="InputBox" DesignTimeRectangle="974, 390, 153, 30" ElementType="Text" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl parentid='main_table_countries_today_filter' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main_table_countries_today_filter' tag='LABEL' type='' class='' aaname='Search:' check:innerText='Search:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJ0AAAAiCAYAAABFutt2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPcSURBVHhe7ZzfS9tQFMf31wYhDMIIiCJmUAZFWB/CoAxkrIh9MA9zsA7Wh/WlY3RIYOShg5mXoplFLQQNSLR8d+7NjTYarftBguZ84GBPbn4U74dzf0D6BAxTMCwdUziVli6KIuzu7sJ1Xezs7HAUFJWVTggnZNvb28Px8TEmkwlHQVFZ6USFE8IJ+S4uLjCdTjkKispKJ6rc6emp/CcwxVJZ6cTc4vz8XGVMkVRaOq5y5cDSMYXzQKSLEXgDePuxyv8dlq48bkgXjwdor1kwF00Z1to6Om5A3V4mATqrGqwPgcr/HZauPLLS+Q6WFzQsv+li8G1A0UfnTR32p//X2X8HS/eYyEjnb5nQVrapi+cTRyHCMLq9AsYRtYeIzlSexzRGlHNOfKLufelEVjrZfpLz5LPo7ufNwNKVR0a64P0ytEUHvspziXw4dR2apkN/qkHTLbS9SDUSZ0M4Lwzomkbt4jz6W+8gSPv3VweWeMZ+BzWdrqd2+0siUPTTQV3ck47JWGigfyJaEuka77poLib3lGE20NuXlxL0vRbpmNHCUB25C5auPLLDKwlRo+HVeOnAHefVsBC9NWq3+zhU/RV+bcJYqKM3SXJxjv/dR5heHg7QNDTUP4dJLqTTDBirNvrpwkDca9JDnZ5d2xoilPemKngUqkqaSKcZNnrp94pH2K7RsVcDdU4Mb8OCteHdXn1nYOnKI3ch0XquKtRqE90fShbBmKTUlrF9WV0EQ7RmpbrBtfmYkq7lJWlK8MG6o8om9zC3sq3ymlWqoir/E1i68rghXUo88dF/a8lhspYK4zZJRh2GWtmmoVOFuprkxzh0O2jbtfx2KZ2Fzq8kTXFfU9VqDlR2nWviKli6h8mt0qUE76ljF9YhC5OUjoZFmvyLRcJspBP44YYB7VkDjjtKjsd5lY6lqzJzpcM3IVoTrvgshTHR/ilbcvCwTlUtO9QG2F6ZL919hleW7nGQkW7kdjEcXW1VxEe0Es1M1iP0bcpXWnAnaro+peHU9+BLz5IVpLk5TM6nttHHBi005kuXu5AYHdKyRHAf6Xgh8VDISOdtJlsdl1sSNH8z7S5Gs71Iq8auTfO02fOeiiE3aY7cFky1FSKutzY9eFvmfOmIyGvDmt0y0VvJsH4v6UZwluiaJYc+zYelK4/c4fVyc1bludyysStJ2+5TcnKQG895m7/z4M3hB8H8Od0jhaUrD5aOKRyWjikclo4pHJaOKRyWjimcykonXkHkt8HKobLSiZetDw4OVMYUSWWlS39WYjweyzf8meKorHQC/gGdcqLS0jHlwNIxBQP8BuwdeUnBECZZAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NGetText DisplayName="Get Country Name" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="b454b321-bd4d-401d-84e2-72c0d8a44eac" TextString="[country]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.worldometers.info/coronavirus/" CvTextArea="457, 656, 55, 19" CvType="AnyWordGroup" DesignTimeRectangle="452, 645, 99, 39" DesignTimeScaleFactor="1" FriendlyName="'Turkey'" FullSelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' aaname='' /&gt;" Guid="c99bc4b5-354f-4f23-b5bf-1fb02a23998d" InformativeScreenshot="90d9703e4a2984d925f433648bd43d65.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='COVID - Coronavirus Statistics - Worldometer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="452, 587, 99, 58" FriendlyName="'Country,Other'" FullSelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl aria-label='Country,Other: activate to sort column ascending' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl aria-label='Country,Other: activate to sort column ascending' type='' tag='TH' class='sorting' aaname='Country,Other' check:innerText='Country,&amp;#xD;&amp;#xA;Other' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Total Cases" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="b454b321-bd4d-401d-84e2-72c0d8a44eac" TextString="[totalCases]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.worldometers.info/coronavirus/" CvTextArea="566, 658, 81, 16" CvType="AnyWordGroup" DesignTimeRectangle="550, 645, 106, 39" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'26,363,670'" FullSelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl class='sorting_1' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl class='sorting_1' type='' tag='TD' /&gt;" Guid="8605082a-ae49-457a-abe4-7ca60a4e5472" InformativeScreenshot="3e1233308228a0fc4ae3e5b0ea9d3677.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='COVID - Coronavirus Statistics - Worldometer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="550, 587, 106, 58" FriendlyName="'TotalCases'" FullSelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl aria-label='TotalCases: activate to sort column ascending' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl aria-label='TotalCases: activate to sort column ascending' type='' tag='TH' class='sorting_desc' aaname='TotalCases' check:innerText='Total&amp;#xD;&amp;#xA;Cases' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get New Cases" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="b454b321-bd4d-401d-84e2-72c0d8a44eac" TextString="[newCases]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.worldometers.info/coronavirus/" DesignTimeRectangle="656, 645, 79, 39" DesignTimeScaleFactor="1" FriendlyName="'TD'" FullSelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='4' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' class='' tag='TD' aaname='' /&gt;" Guid="36f20034-2701-4390-a69f-eab19e078aa2" InformativeScreenshot="be87fbbe900fda77bda69331c67425b1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='COVID - Coronavirus Statistics - Worldometer' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="656, 587, 79, 58" FriendlyName="'NewCases'" FullSelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl aria-label='NewCases: activate to sort column descending' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl aria-label='NewCases: activate to sort column descending' type='' tag='TH' class='sorting' aaname='NewCases' check:innerText='New&amp;#xD;&amp;#xA;Cases' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Total Deaths" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="b454b321-bd4d-401d-84e2-72c0d8a44eac" TextString="[totalDeaths]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.worldometers.info/coronavirus/" CvTextArea="756, 658, 59, 16" CvType="AnyWordGroup" DesignTimeRectangle="735, 645, 88, 39" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'193,144'" FullSelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='5' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' class='' tag='TD' /&gt;" Guid="83683ed6-c031-4b6a-83a8-179f2f42981a" InformativeScreenshot="ddbe864fde5297d1919fe2b1c03bc8d4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='COVID - Coronavirus Statistics - Worldometer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="735, 587, 88, 58" FriendlyName="'TotalDeaths'" FullSelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl aria-label='TotalDeaths: activate to sort column descending' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl aria-label='TotalDeaths: activate to sort column descending' type='' tag='TH' class='sorting' aaname='TotalDeaths' check:innerText='Total&amp;#xD;&amp;#xA;Deaths' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get New Deaths" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="b454b321-bd4d-401d-84e2-72c0d8a44eac" TextString="[newDeaths]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.worldometers.info/coronavirus/" DesignTimeRectangle="823, 645, 88, 39" DesignTimeScaleFactor="1" FriendlyName="'TD'" FullSelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='6' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' class='' tag='TD' aaname='' /&gt;" Guid="c894e608-93e2-46b1-af1a-d2fc8c924973" ImageBase64="" InformativeScreenshot="8e82f2a8590de82f02740faa83f8845f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='COVID - Coronavirus Statistics - Worldometer' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="823, 587, 88, 58" FriendlyName="'NewDeaths'" FullSelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl aria-label='NewDeaths: activate to sort column descending' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl aria-label='NewDeaths: activate to sort column descending' type='' tag='TH' class='sorting' aaname='NewDeaths' check:innerText='New&amp;#xD;&amp;#xA;Deaths' /&gt;" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Total Recoverd" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="b454b321-bd4d-401d-84e2-72c0d8a44eac" TextString="[totalRecovered]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.worldometers.info/coronavirus/" DesignTimeRectangle="911, 645, 112, 39" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'25,987,972'" FullSelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='7' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' class='' tag='TD' /&gt;" Guid="6b4426f6-65be-4919-a559-70e583637cf9" ImageBase64="" InformativeScreenshot="a94273e0a3c9a4c310984d714e27592a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='COVID - Coronavirus Statistics - Worldometer' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="911, 587, 112, 58" FriendlyName="'TotalRecovered'" FullSelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl aria-label='TotalRecovered: activate to sort column descending' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl id='main_table_countries_today' tag='TABLE' /&gt;&lt;webctrl aria-label='TotalRecovered: activate to sort column descending' type='' tag='TH' class='sorting' aaname='TotalRecovered' check:innerText='Total&amp;#xD;&amp;#xA;Recovered' /&gt;" ImageBase64="" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object(){&#xD;&#xA;country,&#xD;&#xA;totalCases, &#xD;&#xA;newCases.Replace(&quot;+&quot;,&quot;&quot;), &#xD;&#xA;totalDeaths, &#xD;&#xA;newDeaths.Replace(&quot;+&quot;,&quot;&quot;), &#xD;&#xA;totalRecovered&#xD;&#xA;}]" DataTable="[dt_CoronovirusStats]" DisplayName="Add Data to DT" sap:VirtualizedContainerService.HintSize="388,186" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsRAAALEQF/ZF+RAAADA0lEQVRYR+2Y208TQRSHfZA/T0BErUrUiNGAJl4SE43RxMSYqIkxPqiJD0ZAsBgEBBQkgDbcvWCMBXqjNy69t/TGbkt7PGd2uuxul0YSKC89yffQ2d/OfLszzUx7oNVaW4VcQGaQFAJ7TBKZQs4iB0mgCQkheuG9JIg0kMCcorHczJCAqGksJyIJKBpqoEWB+pqW3cnKAm3WOpj2PwdrbAgssc+wGB2APvcVvKFadQPRbjsKP4Ov5exCtA96XZd0RGrAaG+AP2EjZgcZ5kgPfFg6L2e3BGxHwJ2YgkLl8lkYW7kPLZZDig6lTt/ZT0BgY4EnATbzIgwv3ynK0iBdOFg8s8aTAOJmAgbc1+UHU7wBEpjksdICHSSQnudJgGxegGHv/wkIFYGKQEWgIrATgdH9FdiErysP9k8gjwLfVh+WU6AOXIlxHqPKw4TvKbzRFTCAXyEgbUZ3txFo1AjEod99rViAsK+P8JhU0/4XRQLU6XvHGYgKLp4i1RyYVh/pZKtxm74M6WyEJwFS2RD0OJuKBajBHOnmMalor2+1Hka29nkaxLT2mD21suZxn5cy6uyM/yUTLJQv/Zdt54WcSmBk+R5kcmkelV7X+NoTNj0F40HPTQgLSzyxVZSd9D2Dt7Z6OfvFextioocnpJoLtcnXCdUU0EnHGTfxqFTUsTsxwU5IjvVRSGYD/EpxZXIp8CSmeXYMX3eQX5GKZD7ilGwrQBfoGBYWHPyW0hUVXbgYzfxT6aIHYd8qxeCESoCgwCfPDTZXpYokh7y32ILyJmdV86yteGaVrRtpPanHKxIgSKJr6RzMBl7BSuoXe+30BOlsmH3/f4faodfZzHJEp+M0O9AuJ79DMkPZdbbygxuL7EDa776KOe2BVUJXgKAbqPMO23Hodl5knfS6mnEFn+QDKzvErKUa19AxlqVppFOy0X5K7kfZtxISELSNWgqdSB3pP0mBnWQRgQR+aBrLySQJNCL0Q1EvsJcEEAMJ0M9zA2JC0oheeDehvwDGkPpWa23VP3lXfNq9goBBAAAAAElFTkSuQmCC" InformativeScreenshot="523535923ae40268668637edc145b1fa.jpg" Selector="&lt;html app='chrome.exe' title='COVID - Coronavirus Statistics - Worldometer' /&gt;" Title="COVID - Coronavirus Statistics - Worldometer - Google Chrome" Url="https://www.worldometers.info/coronavirus/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:OutputDataTable DataTable="[dt_CoronovirusStats]" DisplayName="Output Stats to DT" sap:VirtualizedContainerService.HintSize="606,80" sap2010:WorkflowViewState.IdRef="OutputDataTable_4" Text="[dt_OutputStats]" />
+    <ui:LogMessage DisplayName="Log Data" sap:VirtualizedContainerService.HintSize="606,141" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[dt_OutputStats]" />
+    <Assign DisplayName="Assing list of emails" sap:VirtualizedContainerService.HintSize="606,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[listOfEmails]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[{"scream1461@gmail.com","fikret_gezer@outlook.com"}]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Assign stats info" sap:VirtualizedContainerService.HintSize="606,83" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[countryCovStats]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">["Coronovirus Stats in " + dt_CoronovirusStats.Rows(0)(0).ToString + " are below: " + Environment.NewLine + 
+"Total Cases: " + dt_CoronovirusStats.Rows(0)(1).ToString + Environment.NewLine +
+"New Cases: " + dt_CoronovirusStats.Rows(0)(2).ToString + Environment.NewLine +
+"Total Deaths: " + dt_CoronovirusStats.Rows(0)(3).ToString + Environment.NewLine +
+"New Deaths: " + dt_CoronovirusStats.Rows(0)(4).ToString + Environment.NewLine +
+"Total Recovered: " + dt_CoronovirusStats.Rows(0)(5).ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="ldfikretld@gmail.com" DisplayName="Use My Gmail" EmailAddress="ldfikretld@gmail.com" sap:VirtualizedContainerService.HintSize="606,973" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+      <umab:GmailApplicationCard.Body>
+        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Perform Email Ops" sap:VirtualizedContainerService.HintSize="572,753" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Emails" sap:VirtualizedContainerService.HintSize="510,642" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[listOfEmails]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="currentMail" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,456" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[countryCovStats]" BodyType="Text" DisplayName="Send Email to Current Person" sap:VirtualizedContainerService.HintSize="434,368" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[&quot;Coronovirus Stats in &quot; + dt_CoronovirusStats.Rows(0)(0).ToString]" To="[currentMail]" UseDocumentAsBody="False">
+                      <umab:SendMailX.Files>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                      </umab:SendMailX.Files>
+                      <umab:SendMailX.HtmlBodyFromFile>
+                        <umabh:HtmlContentArgument FilePath="{x:Null}">
+                          <umabh:HtmlContentArgument.RuntimeImages>
+                            <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                          </umabh:HtmlContentArgument.RuntimeImages>
+                          <umabh:HtmlContentArgument.ValueMappings>
+                            <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                          </umabh:HtmlContentArgument.ValueMappings>
+                        </umabh:HtmlContentArgument>
+                      </umab:SendMailX.HtmlBodyFromFile>
+                    </umab:SendMailX>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </umab:GmailApplicationCard.Body>
+      <umab:GmailApplicationCard.ClientId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:GmailApplicationCard.ClientId>
+      <umab:GmailApplicationCard.ClientSecret>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:GmailApplicationCard.ClientSecret>
+    </umab:GmailApplicationCard>
   </Sequence>
 </Activity>
