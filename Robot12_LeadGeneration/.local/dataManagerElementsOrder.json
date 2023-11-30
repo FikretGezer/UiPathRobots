@@ -1,0 +1,30 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "currentSheetName&Sequence_1",
+        "dt_OutPlaces&Sequence_1",
+        "dt_Places&Sequence_1",
+        "maxIteration&Sequence_1",
+        "phoneNumber&Sequence_3",
+        "placeName&Sequence_1",
+        "city&Sequence_1",
+        "currentIndex&Sequence_1",
+        "niche&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

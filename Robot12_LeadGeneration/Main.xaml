@@ -1,0 +1,338 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="779,5331" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="722,5266" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="niche" />
+      <Variable x:TypeArguments="x:String" Name="city" />
+      <Variable x:TypeArguments="x:Int32" Name="currentIndex">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="3" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="placeName" />
+      <Variable x:TypeArguments="x:String" Name="maxIteration" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_Places" />
+      <Variable x:TypeArguments="x:String" Name="dt_OutPlaces" />
+      <Variable x:TypeArguments="x:String" Name="currentSheetName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Get Niche" sap:VirtualizedContainerService.HintSize="660,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter a niche" Title="Get The Niche">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[niche]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Get City" sap:VirtualizedContainerService.HintSize="660,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter a City" Title="Get The City">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[city]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="Check is Max Iteration Numeric" sap:VirtualizedContainerService.HintSize="660,463" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+      <ui:InterruptibleWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Get Max Iteration" sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Enter the max iteration" Title="Get Max Iteration">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="x:String">[maxIteration]</OutArgument>
+            </ui:InputDialog.Result>
+          </ui:InputDialog>
+        </Sequence>
+      </ui:InterruptibleWhile.Body>
+      <ui:InterruptibleWhile.Condition>
+        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="IsNumeric(maxIteration) = False" />
+      </ui:InterruptibleWhile.Condition>
+    </ui:InterruptibleWhile>
+    <Assign DisplayName="Assign Sheet Name" sap:VirtualizedContainerService.HintSize="660,83" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[currentSheetName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[niche.First.ToString.ToUpper + niche.Substring(1).ToLower +
+"_" +
+city.First.ToString.ToUpper + city.Substring(1).ToLower]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:BuildDataTable DataTable="[dt_Places]" DisplayName="Build DT for Places" sap:VirtualizedContainerService.HintSize="660,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Place_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Phone_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <Assign DisplayName="Assign index" sap:VirtualizedContainerService.HintSize="660,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[currentIndex]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">1</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Google Maps" sap:VirtualizedContainerService.HintSize="660,2185" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="bba9815c-8be9-4df6-bce9-232bc74686f5" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Ops" sap:VirtualizedContainerService.HintSize="626,1928" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Search niche in a given city" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="564,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="bba9815c-8be9-4df6-bce9-232bc74686f5" Text="[niche + &quot; in &quot; + city]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.google.com/maps/@40.7568384,30.3661056,13z?entry=ttu" CvTextArea="119, 188, 143, 17" CvTextArgument="Google Haritalar'da ara" CvType="Text" DesignTimeRectangle="120, 184, 246, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT searchboxinput'" FullSelectorArgument="&lt;webctrl id='searchboxinput' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchboxinput' tag='INPUT' type='' class='searchboxinput xiQnY' aaname='Google Haritalar&amp;apos;da ara' /&gt;" Guid="647e08d4-20ca-416d-b6f3-6442a863d578" InformativeScreenshot="e958256595528c6cc3258a5b2d580c86.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Haritalar' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CvTextArea="119, 188, 143, 17" CvTextArgument="Google Haritalar'da ara" CvType="Text" DesignTimeRectangle="120, 184, 246, 26" ElementType="Text" FriendlyName="'Google Haritalar'da ara'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='z1Srse fontBodyMedium' aaname='Google Haritalar&amp;apos;da ara' check:innerText='Google Haritalar&amp;apos;da ara' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Press Enter After Typing" sap:VirtualizedContainerService.HintSize="564,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="Loop As Giving Amount Of Place" sap:VirtualizedContainerService.HintSize="564,1340" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="530,1204" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="phoneNumber" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <TryCatch DisplayName="Try Getting Place and Number" sap:VirtualizedContainerService.HintSize="488,1116" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <TryCatch.Try>
+                      <Sequence DisplayName="Try Clicking Place on Current Index" sap:VirtualizedContainerService.HintSize="450,888" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Current Place" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bba9815c-8be9-4df6-bce9-232bc74686f5" Timeout="5" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.google.com/maps/place/Olaf+Rathmann/@52.4801605,13.3438887,12z/data=!4m10!1m2!2m1!1splumber+in+berlin!3m6!1s0x47a8522f148486df:0x6f9b95200745a45d!8m2!3d52.5535033!4d13.3740219!15sChFwbHVtYmVyIGluIGJlcmxpbpIBB3BsdW1iZXLgAQA!16s%2Fg%2F1vg_6b2k?entry=ttu" DesignTimeRectangle="80, 233, 402, 114" DesignTimeScaleFactor="1" FriendlyName="'A'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl class='hfpxzc' idx='{0}' /&gt;&quot;, currentIndex)]" FuzzySelectorArgument="&lt;webctrl class='hfpxzc' tag='A' type='' aaname='' /&gt;" Guid="ebc77059-1f90-4e81-82ab-0f0cdf2ebc56" InformativeScreenshot="274967113c0f1c3a8d9d53c34b9f2a4a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*Google Haritalar' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NGetText DisplayName="Get Place Name" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="bba9815c-8be9-4df6-bce9-232bc74686f5" TextString="[placeName]" Version="V3">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.google.com/maps/place/Olaf+Rathmann/@52.4801605,13.3438887,12z/data=!4m10!1m2!2m1!1splumber+in+berlin!3m6!1s0x47a8522f148486df:0x6f9b95200745a45d!8m2!3d52.5535033!4d13.3740219!15sChFwbHVtYmVyIGluIGJlcmxpbpIBB3BsdW1iZXLgAQA!16s%2Fg%2F1vg_6b2k?entry=ttu" CvTextArea="532, 479, 147, 21" CvType="AnyWordGroup" DesignTimeRectangle="532, 477, 354, 28" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'RohrBlitz Berlin'" FullSelectorArgument="&lt;webctrl class='DUwDvf lfPIob' /&gt;" FuzzySelectorArgument="&lt;webctrl class='DUwDvf lfPIob' tag='H1' type='' /&gt;" Guid="797baacd-1cea-4ac9-aef3-19fa84715614" ImageBase64="" InformativeScreenshot="b96eb577c490f9554122bb6c442fb9df.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*Google Haritalar' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                          </uix:NGetText.Target>
+                        </uix:NGetText>
+                        <uix:NGetText DisplayName="Get Phone Number" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="bba9815c-8be9-4df6-bce9-232bc74686f5" TextString="[phoneNumber]" Version="V3">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.google.com/maps/place/City+Plumbers/@51.4892819,-0.5524265,10z/data=!4m10!1m2!2m1!1splumber+in+london!3m6!1s0x48761f336e4c996b:0x600e7cf1feab48a3!8m2!3d51.504216!4d-0.1489616!15sChFwbHVtYmVyIGluIGxvbmRvbloTIhFwbHVtYmVyIGluIGxvbmRvbpIBB3BsdW1iZXLgAQA!16s%2Fg%2F11s3xpn4kw?entry=ttu" DesignTimeRectangle="580, 865, 306, 20" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'+44 20 8611 2591'" FullSelectorArgument="&lt;webctrl aaname='+*' tag='DIV' class='Io6YTe fontBodyMedium kR99db ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='Io6YTe fontBodyMedium kR99db ' type='' /&gt;" Guid="b3432bb3-a922-4a43-808b-6a336c4d4ccb" ImageBase64="" InformativeScreenshot="4029353c0dca9ed2b176f16bc728da7b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*Google Haritalar' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                          </uix:NGetText.Target>
+                        </uix:NGetText>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object(){&#xA;placeName,&#xA;phoneNumber&#xA;}]" DataTable="[dt_Places]" DisplayName="Add Places to DT" sap:VirtualizedContainerService.HintSize="388,186" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                      </Sequence>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <ui:LogMessage DisplayName="Log Exception Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;There is no place in index: &quot; + currentIndex.ToString]" />
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                    <TryCatch.Finally>
+                      <Assign DisplayName="Increase Index" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[currentIndex]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[currentIndex + 1]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </TryCatch.Finally>
+                  </TryCatch>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="currentIndex &lt; Convert.ToInt32(maxIteration)" />
+              </ui:InterruptibleWhile.Condition>
+            </ui:InterruptibleWhile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOuSURBVFhHvZZrSFNRHMCvaQoVJWGRLjI/9MAepHdbimbNqWEP0D2gB4KRXxKU2LKoFFY5owIjwiLyg2Tp3SqMJPMVQpAf+hBC9KCCIMuuU5hzm+I2PZ0r/7vO7k7M6fIHvw/O/z2/49n1bkz4oCiZgc+QGX6XygzDNTIjb046w1cmGodytplQLAxFno2n7fFJxuFr2MEkI4+kJlfZfqlqnTzWXGByroXLIkOiYViLI7w0KrqhyubJueJEuWaX6GhurVMPly8MHKjAzpBB0vVneJR1aZyM+1WZXedhmfnRd/jIyZ2Vn6ZpYUH8/iOlaYwa91vnPAXLhceISr7Fpla4v+5XuVTl/dQN7Kq206OBTuRfcWyCZeeOTa18jDeABH/kZ88cK3sWEE89P0qLUc26++ghLDs3+AJlCg5PixsQ5NVKdKHkzmx841nhjndfUpudqrzLrh3qWpcBh8alYcHs2+0eOaf1sc2aRFg+NDhYScZJH+vK36RfHmNh1E9u7WSy2uwaIuM59W+RvFU/jTeAWIvGCKOhwaEn0vCsBfIJ1/V1pTAWhLrOXSTG913/hhQtJUiIgw9gLDQ41h8Uz5PPTN5f7UYmZgmMBYNQFI7bVVdtSNlcTsaRgtO+hqnQ4OCAdAOuG+uQpzf6O4z8k9w6x/eMpprZYydlOe0HGAkN/mu7yLjjXAry9sYIelEfEw9jQewz2eMzG+sd0rhguCfQJMbtZVuQt2epuAHk641ugLEgMh5U1dPigmyr1gJjobHlKSuE+Kh+p8/zIs4fB2ewNfgkYmCcQVYmuqF9+y0cCjp6UbyBShgPzUh+WtLIftYx9WSZNE76BZ/GPe+rmKcfO1ePZnCaSVpYVMkVb4bl58ZE86o2SjRIW89yVGg9OEWL+rXoumHZuTPVFbsVB6akQVJ3byw68VRFjxIqrPq9sGx4eHtiTLSwaHWbkhokZTlNeJ8DJKiDicOhz9KwYOPzVGowQIt2kG05mgDLzQ9Pz9I0HJwg490dG4T/a3r0r17Wqs+GZRYGvtuPi/H3nQko01LspQQDVFg0C/s2JAXfDzeHulZ4cyxFY7RggBbdSwYxUXBpZBAePAeshW3UICF+5v9Ms+rXwGWRJe2RJhlHqM960JfeqtsD4/8HeaumhBIWvQhj/xfhySaN46MfiPj7/i8UnEYh3UA6pzsEv14c8HOgk9jAO3h58SDvBXz8Bnh58dj98PhKHBc+gn2ZVr0MXl5cWE6nF04CfpwHDPMH5T/3xQh0hLAAAAAASUVORK5CYII=" InformativeScreenshot="2d962a0a54224916f8507a0060a3a567.jpg" Selector="&lt;html app='chrome.exe' title='Google*' /&gt;" Title="Google Haritalar" Url="https://www.google.com/maps/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Write DT in Excel" sap:VirtualizedContainerService.HintSize="660,1223" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Excel Process" sap:VirtualizedContainerService.HintSize="592,1136" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Open the Excel file to write or create one" sap:VirtualizedContainerService.HintSize="530,1025" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="Niche in A City">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Actual Writing" sap:VirtualizedContainerService.HintSize="496,756" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:DeleteSheetX DisplayName="Remove same name existing sheet" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="DeleteSheetX_2" Sheet="[Excel.Sheet(currentSheetName)]" />
+                    <ueab:InsertSheetX DisplayName="Insert New Sheet" sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="InsertSheetX_3" Name="[currentSheetName]" Workbook="[Excel]" />
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(currentSheetName)]" DisplayName="Write DT to The Excel File" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[dt_Places]" />
+                    <ueab:DeleteSheetX DisplayName="Remove Default Page" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="DeleteSheetX_3" Sheet="[Excel.Sheet(&quot;Sayfa1&quot;)]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelProcessScopeX>
+    <ui:OutputDataTable DataTable="[dt_Places]" DisplayName="Output DT to Log" sap:VirtualizedContainerService.HintSize="660,80" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[dt_OutPlaces]" />
+    <ui:LogMessage DisplayName="Log DT" sap:VirtualizedContainerService.HintSize="660,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[dt_OutPlaces]" />
+  </Sequence>
+</Activity>
