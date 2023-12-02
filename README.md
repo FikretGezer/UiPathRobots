@@ -1,5 +1,5 @@
 # UiPath Robots
-### • <span style="color:red">[Robot 1: Clothing Consultant](#robot-1)</span>
+### • [Robot 1: Clothing Consultant](#robot-1)
 ### • [Robot 2: Data Capturing](#robot-2)
 ### • [Robot 3: The Automation Challenge](#robot-3)
 ### • [Robot 4: Real Estate Website Data Scraping](#robot-4)
@@ -13,7 +13,7 @@
 ### • [Robot 12: Lead Generation](#robot-12)
 ### • [Robot 13: Calendar Picker](#robot-13)
 
-## Robot 1: Clothing Consultant <a name="robot-1"></a>
+## <span style="color:red">Robot 1: Clothing Consultant <a name="robot-1"></a></span>
 ### What This Robot Does?
 Gets place input from the user to search weather.
 And then uses the flowchart I created to suggest a cloth to wear or equipment to take before going out.
