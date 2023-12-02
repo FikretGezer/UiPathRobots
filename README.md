@@ -7,9 +7,11 @@
 Gets place input from the user to search weather.
 And then uses the flowchart I created to suggest a cloth to wear or equipment to take before going out.
 ### Screenshots
-<div align="center">  
+<div>
   • How the flowchart I created looks
-  <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/fb380085-6acc-4b8e-ac9e-aecec68a3bc6" alt="" />
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/fb380085-6acc-4b8e-ac9e-aecec68a3bc6" alt="" />
+  </div>
 </div>
 
 <div align="center">  
