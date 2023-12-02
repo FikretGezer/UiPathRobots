@@ -1,8 +1,17 @@
 # UiPath Robots
-## Projects
-### - [Robot 1 Clothing Consultant](#robot-1)
-### - [Section 2](#section-2)
-### - [Section 3](#section-3)
+## ♦ [Robot 1: Clothing Consultant](#robot-1)
+## ♦ [Robot 2: Data Capturing](#robot-2)
+## ♦ [Robot 3: The Automation Challenge](#robot-3)
+## ♦ [Robot 4: Real Estate Website Data Scraping](#robot-4)
+## ♦ [Robot 5: PDF Data Scraping](#robot-5)
+## ♦ [Robot 6: Data Scraping with OCR](#robot-6)
+## ♦ [Robot 7: Email Automation](#robot-7)
+## ♦ [Robot 8: Coronovirus Stat Alert](#robot-8)
+## ♦ [Robot 9: IP Address To Location Converter](#robot-9)
+## ♦ [Robot 10: Volume of Cylinder Calculator](#robot-10)
+## ♦ [Robot 11: Image Background Remover](#robot-11)
+## ♦ [Robot 12: Lead Generation](#robot-12)
+## ♦ [Robot 13: Calendar Picker](#robot-13)
 
 ## Robot 1 Clothing Consultant <a name="robot-1"></a>
 ### What This Robot Does?
@@ -22,7 +31,7 @@ And then uses the flowchart I created to suggest a cloth to wear or equipment to
   </div>
 </div>
 
-## Robot 2 Data Capturing
+## Robot 2 Data Capturing <a name="robot-2"></a>
 ### What This Robot Does?
 Simultaneously writes data in web page and application.
 ### Screenshots
@@ -45,7 +54,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 3 The Automation Challenge
+## Robot 3 The Automation Challenge <a name="robot-3"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -64,7 +73,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 4 Real Estate Website Data Scraping
+## Robot 4 Real Estate Website Data Scraping <a name="robot-4"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -93,7 +102,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 5 PDF Data Scraping
+## Robot 5 PDF Data Scraping <a name="robot-5"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -107,7 +116,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 6 Data Scraping with OCR
+## Robot 6 Data Scraping with OCR <a name="robot-6"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -131,7 +140,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 7 Email Automation
+## Robot 7 Email Automation <a name="robot-7"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -160,7 +169,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 8 Coronovirus Stat Alert
+## Robot 8 Coronovirus Stat Alert <a name="robot-8"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -184,7 +193,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 9 IP Address To Location Converter
+## Robot 9 IP Address To Location Converter <a name="robot-9"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -203,7 +212,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 10 Volume of Cylinder Calculator
+## Robot 10 Volume of Cylinder Calculator <a name="robot-10"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -222,7 +231,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 11 Image Background Remover
+## Robot 11 Image Background Remover <a name="robot-11"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -251,7 +260,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 12 Lead Generation
+## Robot 12 Lead Generation <a name="robot-12"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -280,7 +289,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 13 Calendar Picker
+## Robot 13 Calendar Picker <a name="robot-13"></a>
 ### What This Robot Does?
 Gets three inputs. First input for the place to go, other two for start date and end date. After getting the inputs go into Booking.com and types and selects place and dates and searches the hotels. Gets hotel names, address, prices and URLs and write this data in an Excel file.
 ### Screenshots
