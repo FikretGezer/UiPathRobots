@@ -20,7 +20,7 @@ And then uses the flowchart I created to suggest a cloth to wear or equipment to
 ### Screenshots
 <div>
   • How the flowchart I created looks
-  <div align="center">    
+  <div align="center" color="red">    
     <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/fb380085-6acc-4b8e-ac9e-aecec68a3bc6" alt="" />
   </div>
 </div>
