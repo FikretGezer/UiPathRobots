@@ -1,6 +1,6 @@
 # UiPath Robots
 ## Projects
-### • Robot 1 Clothing Consultant
+### • Robot 2 Data Capturing
 
 ## Robot 1 Clothing Consultant
 ### What This Robot Does?
