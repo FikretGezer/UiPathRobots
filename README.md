@@ -13,7 +13,7 @@
 ### ♦ [Robot 12: Lead Generation](#robot-12)
 ### ♦ [Robot 13: Calendar Picker](#robot-13)
 
-## Robot 1 Clothing Consultant <a name="robot-1"></a>
+## Robot 1: Clothing Consultant <a name="robot-1"></a>
 ### What This Robot Does?
 Gets place input from the user to search weather.
 And then uses the flowchart I created to suggest a cloth to wear or equipment to take before going out.
@@ -31,7 +31,7 @@ And then uses the flowchart I created to suggest a cloth to wear or equipment to
   </div>
 </div>
 
-## Robot 2 Data Capturing <a name="robot-2"></a>
+## Robot 2: Data Capturing <a name="robot-2"></a>
 ### What This Robot Does?
 Simultaneously writes data in web page and application.
 ### Screenshots
@@ -54,7 +54,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 3 The Automation Challenge <a name="robot-3"></a>
+## Robot 3: The Automation Challenge <a name="robot-3"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -73,7 +73,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 4 Real Estate Website Data Scraping <a name="robot-4"></a>
+## Robot 4: Real Estate Website Data Scraping <a name="robot-4"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -102,7 +102,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 5 PDF Data Scraping <a name="robot-5"></a>
+## Robot 5: PDF Data Scraping <a name="robot-5"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -116,7 +116,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 6 Data Scraping with OCR <a name="robot-6"></a>
+## Robot 6: Data Scraping with OCR <a name="robot-6"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -140,7 +140,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 7 Email Automation <a name="robot-7"></a>
+## Robot 7: Email Automation <a name="robot-7"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -169,7 +169,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 8 Coronovirus Stat Alert <a name="robot-8"></a>
+## Robot 8: Coronovirus Stat Alert <a name="robot-8"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -193,7 +193,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 9 IP Address To Location Converter <a name="robot-9"></a>
+## Robot 9: IP Address To Location Converter <a name="robot-9"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -212,7 +212,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 10 Volume of Cylinder Calculator <a name="robot-10"></a>
+## Robot 10: Volume of Cylinder Calculator <a name="robot-10"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -231,7 +231,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 11 Image Background Remover <a name="robot-11"></a>
+## Robot 11: Image Background Remover <a name="robot-11"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -260,7 +260,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 12 Lead Generation <a name="robot-12"></a>
+## Robot 12: Lead Generation <a name="robot-12"></a>
 ### What This Robot Does?
 ### Screenshots
 <div>
@@ -289,7 +289,7 @@ Simultaneously writes data in web page and application.
   </div>
 </div>
 
-## Robot 13 Calendar Picker <a name="robot-13"></a>
+## Robot 13: Calendar Picker <a name="robot-13"></a>
 ### What This Robot Does?
 Gets three inputs. First input for the place to go, other two for start date and end date. After getting the inputs go into Booking.com and types and selects place and dates and searches the hotels. Gets hotel names, address, prices and URLs and write this data in an Excel file.
 ### Screenshots
