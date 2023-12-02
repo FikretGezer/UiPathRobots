@@ -13,7 +13,7 @@
 ### • [Robot 12: Lead Generation](#robot-12)
 ### • [Robot 13: Calendar Picker](#robot-13)
 
-<span style="color:red">This is red text.</span>
+- ![#f03c15] Text `#f03c15`
 ## Robot 1: Clothing Consultant <a name="robot-1"></a>
 ### What This Robot Does?
 Gets place input from the user to search weather.
