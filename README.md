@@ -24,12 +24,24 @@ And then uses the flowchart I created to suggest a cloth to wear or equipment to
 ### What This Robot Does?
 Simultaneously writes data in web page and application.
 ### Screenshots
-• Bot structure in UiPath
-![Ekran görüntüsü 2023-11-29 005839](https://github.com/FikretGezer/UiPathRobots/assets/64322071/2080bd92-94a3-4688-a03f-5a00595a3205)
-• Website view of the data writing
-![Ekran görüntüsü 2023-11-29 010036](https://github.com/FikretGezer/UiPathRobots/assets/64322071/4bb357ca-ad53-40bd-8771-8a6543e9db15)
-• Application view of the data writing
-![Ekran görüntüsü 2023-11-29 032249](https://github.com/FikretGezer/UiPathRobots/assets/64322071/499a153e-85d7-4d8a-a2fc-7754619266d1)
+<div>
+  • Bot structure in UiPath
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/2080bd92-94a3-4688-a03f-5a00595a3205" alt="" />
+  </div>
+</div>
+<div>
+  • Website view of the data writing
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/4bb357ca-ad53-40bd-8771-8a6543e9db15" alt="" />
+  </div>
+</div>
+<div>
+  • Application view of the data writing
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/499a153e-85d7-4d8a-a2fc-7754619266d1" alt="" />
+  </div>
+</div>
 
 ## Robot 3 The Automation Challenge
 ### What This Robot Does?
