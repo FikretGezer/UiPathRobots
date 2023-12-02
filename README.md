@@ -7,8 +7,11 @@
 Gets place input from the user to search weather.
 And then uses the flowchart I created to suggest a cloth to wear or equipment to take before going out.
 ### Screenshots
-• How the flowchart I created looks
-![Ekran görüntüsü 2023-11-29 005611](https://github.com/FikretGezer/UiPathRobots/assets/64322071/fb380085-6acc-4b8e-ac9e-aecec68a3bc6)
+<p align="center">
+  • How the flowchart I created looks
+  <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/fb380085-6acc-4b8e-ac9e-aecec68a3bc6" alt="" />
+</p>
+
 • Output of the bot
 ![Ekran görüntüsü 2023-11-29 005804](https://github.com/FikretGezer/UiPathRobots/assets/64322071/57e70963-7b03-48ee-a806-f925616b82a2)
 
@@ -53,7 +56,6 @@ Simultaneously writes data in web page and application.
 ![Ekran görüntüsü 2023-12-03 003740](https://github.com/FikretGezer/UiPathRobots/assets/64322071/1802bb85-19c3-438d-866f-a9aa17ea4d02)
 ![Ekran görüntüsü 2023-12-03 003836](https://github.com/FikretGezer/UiPathRobots/assets/64322071/9ddb703a-b4fd-4b9f-9d73-cf4d531a11ed)
 <p align="center">
-  <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/9ddb703a-b4fd-4b9f-9d73-cf4d531a11ed" alt="" />
   <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/9ddb703a-b4fd-4b9f-9d73-cf4d531a11ed" alt="" />
 </p>
 
