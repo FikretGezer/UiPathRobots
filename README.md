@@ -1,5 +1,5 @@
 # UiPath Robots
-<span style="color:red">### • [Robot 1: Clothing Consultant](#robot-1)</span>
+### • <span style="color:red">[Robot 1: Clothing Consultant](#robot-1)</span>
 ### • [Robot 2: Data Capturing](#robot-2)
 ### • [Robot 3: The Automation Challenge](#robot-3)
 ### • [Robot 4: Real Estate Website Data Scraping](#robot-4)
