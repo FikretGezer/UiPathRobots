@@ -9,15 +9,15 @@ And then uses the flowchart I created to suggest a cloth to wear or equipment to
 ### Screenshots
 <div>
   • How the flowchart I created looks
-  <br>
   <div align="center">    
     <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/fb380085-6acc-4b8e-ac9e-aecec68a3bc6" alt="" />
   </div>
 </div>
-
-<div align="center">  
+<div>
   • Output of the bot
-  <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/57e70963-7b03-48ee-a806-f925616b82a2" alt="" />
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/57e70963-7b03-48ee-a806-f925616b82a2" alt="" />
+  </div>
 </div>
 
 ## Robot 2 Data Capturing
