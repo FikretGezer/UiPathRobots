@@ -53,7 +53,8 @@ Simultaneously writes data in web page and application.
 ![Ekran görüntüsü 2023-12-03 003740](https://github.com/FikretGezer/UiPathRobots/assets/64322071/1802bb85-19c3-438d-866f-a9aa17ea4d02)
 ![Ekran görüntüsü 2023-12-03 003836](https://github.com/FikretGezer/UiPathRobots/assets/64322071/9ddb703a-b4fd-4b9f-9d73-cf4d531a11ed)
 <p align="center">
-  <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/9ddb703a-b4fd-4b9f-9d73-cf4d531a11ed" alt="Sublime's custom image"/>
+  <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/9ddb703a-b4fd-4b9f-9d73-cf4d531a11ed" alt="" />
+  <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/9ddb703a-b4fd-4b9f-9d73-cf4d531a11ed" alt="" />
 </p>
 
 ## Robot 7 Email Automation
