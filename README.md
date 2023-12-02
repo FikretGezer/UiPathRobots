@@ -13,13 +13,6 @@
 ### • [Robot 12: Lead Generation](#robot-12)
 ### • [Robot 13: Calendar Picker](#robot-13)
 
-```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
 ## Robot 1: Clothing Consultant <a name="robot-1"></a>
 ### What This Robot Does?
 Gets place input from the user to search weather.
