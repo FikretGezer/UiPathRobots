@@ -1,10 +1,10 @@
 # UiPath Robots
 ## Projects
-### - [Section 1](#section-1)
+### - [Robot 1 Clothing Consultant](#robot-1)
 ### - [Section 2](#section-2)
 ### - [Section 3](#section-3)
 
-## Robot 1 Clothing Consultant
+## Robot 1 Clothing Consultant <a name="robot-1"></a>
 ### What This Robot Does?
 Gets place input from the user to search weather.
 And then uses the flowchart I created to suggest a cloth to wear or equipment to take before going out.
