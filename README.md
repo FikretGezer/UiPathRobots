@@ -25,8 +25,13 @@ And then uses the flowchart I created to suggest a cloth to wear or equipment to
 ### What This Robot Does?
 Gets three inputs. First input for the place to go, other two for start date and end date. After getting the inputs go into Booking.com and types and selects place and dates and searches the hotels. Gets hotel names, address, prices and URLs and write this data in an Excel file.
 ### Screenshots
+• Bot structure in UiPath
 ![Ekran görüntüsü 2023-12-02 231537](https://github.com/FikretGezer/UiPathRobots/assets/64322071/872937c0-c057-4442-9d81-1a7d2507901e)
-![Ekran görüntüsü 2023-12-02 231606](https://github.com/FikretGezer/UiPathRobots/assets/64322071/cac60ec8-9299-4142-af12-d67f6d09abe5)
+• Variable assigning
 ![Ekran görüntüsü 2023-12-02 231621](https://github.com/FikretGezer/UiPathRobots/assets/64322071/aae2122d-00da-461c-bcc2-ffcb0e3e9da5)
+• Browser Operations' Workflow
+![Ekran görüntüsü 2023-12-02 231606](https://github.com/FikretGezer/UiPathRobots/assets/64322071/cac60ec8-9299-4142-af12-d67f6d09abe5)
+• Writing the data in an Excel file
 ![Ekran görüntüsü 2023-12-02 231633](https://github.com/FikretGezer/UiPathRobots/assets/64322071/fb9b0f7d-041b-4919-8200-153ea40000eb)
+• How data looks inside of the Excel file
 ![Ekran görüntüsü 2023-12-02 231921](https://github.com/FikretGezer/UiPathRobots/assets/64322071/21901a90-8d29-4661-a7b5-d4b911e5d023)
