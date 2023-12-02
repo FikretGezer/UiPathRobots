@@ -1,4 +1,8 @@
 # UiPath Robots
+## Projects
+### - [Section 1](#section-1)
+### - [Section 2](#section-2)
+### - [Section 3](#section-3)
 
 ## Robot 1 Clothing Consultant
 ### What This Robot Does?
