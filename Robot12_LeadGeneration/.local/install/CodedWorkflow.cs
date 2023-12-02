@@ -14,13 +14,13 @@ using UiPath.UIAutomationNext.API.Models;
 using UiPath.UIAutomationNext.Enums;
 using UiPath.CodedWorkflows.DescriptorIntegration;
 
-namespace Robot11_LeadGeneration
+namespace Robot12_LeadGeneration
 {
     public partial class CodedWorkflow : CodedWorkflowBase
     {
         public CodedWorkflow()
         {
-            _ = new System.Type[]{typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService)};
+            _ = new System.Type[]{typeof(UiPath.Core.Activities.API.ISystemService), typeof(UiPath.Testing.API.ITestingService), typeof(UiPath.UIAutomationNext.API.Contracts.IUiAutomationAppService)};
         }
 
         protected UiPath.Core.Activities.API.ISystemService system { get => serviceContainer.Resolve<UiPath.Core.Activities.API.ISystemService>(); }
@@ -31,14 +31,14 @@ namespace Robot11_LeadGeneration
     }
 }
 
-namespace Robot11_LeadGeneration.ObjectRepository
+namespace Robot12_LeadGeneration.ObjectRepository
 {
     public static class Descriptors
     {
     }
 }
 
-namespace Robot11_LeadGeneration._Implementation
+namespace Robot12_LeadGeneration._Implementation
 {
     internal class ScreenDescriptorDefinition : IScreenDescriptorDefinition
     {

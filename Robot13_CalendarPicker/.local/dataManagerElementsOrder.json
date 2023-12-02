@@ -1,0 +1,40 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "toDateSelected&Sequence_1",
+        "toDateDay&Sequence_1",
+        "fromDateDay&Sequence_1",
+        "fromDateMonth&Sequence_1",
+        "toDateMonth&Sequence_1",
+        "fromDateSelected&Sequence_2",
+        "toDate&Sequence_1",
+        "fromDate&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WritingInExcel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "dt_Places",
+        "placeToSearch"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
