@@ -13,7 +13,8 @@
 ### • [Robot 12: Lead Generation](#robot-12)
 ### • [Robot 13: Calendar Picker](#robot-13)
 
-## <span style="color:red">Robot 1: Clothing Consultant <a name="robot-1"></a></span>
+<span style="color:red">This is red text.</span>
+## Robot 1: Clothing Consultant <a name="robot-1"></a>
 ### What This Robot Does?
 Gets place input from the user to search weather.
 And then uses the flowchart I created to suggest a cloth to wear or equipment to take before going out.
