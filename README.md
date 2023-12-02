@@ -1,7 +1,7 @@
 # UiPath Robots
-### ♦ [Robot 1: Clothing Consultant](#robot-1)
-### ♦ [Robot 2: Data Capturing](#robot-2)
-### ♦ [Robot 3: The Automation Challenge](#robot-3)
+### • [Robot 1: Clothing Consultant](#robot-1)
+### • [Robot 2: Data Capturing](#robot-2)
+### • [Robot 3: The Automation Challenge](#robot-3)
 ### ♦ [Robot 4: Real Estate Website Data Scraping](#robot-4)
 ### ♦ [Robot 5: PDF Data Scraping](#robot-5)
 ### ♦ [Robot 6: Data Scraping with OCR](#robot-6)
