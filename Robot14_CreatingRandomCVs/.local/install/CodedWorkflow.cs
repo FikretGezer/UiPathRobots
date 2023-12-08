@@ -14,7 +14,7 @@ using UiPath.UIAutomationNext.API.Models;
 using UiPath.UIAutomationNext.Enums;
 using UiPath.CodedWorkflows.DescriptorIntegration;
 
-namespace Robot14_RouletteBot
+namespace Robot15_CreatingRandomCVs
 {
     public partial class CodedWorkflow : CodedWorkflowBase
     {
@@ -31,14 +31,14 @@ namespace Robot14_RouletteBot
     }
 }
 
-namespace Robot14_RouletteBot.ObjectRepository
+namespace Robot15_CreatingRandomCVs.ObjectRepository
 {
     public static class Descriptors
     {
     }
 }
 
-namespace Robot14_RouletteBot._Implementation
+namespace Robot15_CreatingRandomCVs._Implementation
 {
     internal class ScreenDescriptorDefinition : IScreenDescriptorDefinition
     {
