@@ -340,7 +340,7 @@ Gets three inputs. First input for the place to go, other two for start date and
 </div>
 <div>
   <div align="center">    
-    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/f99fac33-d7e5-4a3f-bdbf-73855036057d" alt="" />
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/a5c241db-06e2-41fb-bf08-6db4e5d55bf5" alt="" />
   </div>
 </div>
 <div>
