@@ -1,6 +1,6 @@
 Dear Friend,
 
-Your email automation robot has successfully completed at {0}.
+Email automation robot has successfully completed at {0}.
 
 The following logs are recorded:
 

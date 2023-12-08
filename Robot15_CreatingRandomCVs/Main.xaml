@@ -1,0 +1,424 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="982,12172" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="692,12107" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="name">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Deneme</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="education" />
+      <Variable x:TypeArguments="x:String" Name="summary" />
+      <Variable x:TypeArguments="x:String" Name="experience" />
+      <Variable x:TypeArguments="x:String" Name="projects" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Show Warning" sap:VirtualizedContainerService.HintSize="630,86" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;You need to log in your ChatGPT account before moving forward&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open ChatGPT" sap:VirtualizedContainerService.HintSize="630,5666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Generate Random CV" sap:VirtualizedContainerService.HintSize="596,5448" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Generate Random Full Name" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534,219" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Text="give me random unique full name with structure like this, Full name: John Doe. Just name dont write anything else" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://chat.openai.com/" CvTextArea="726, 1022, 143, 16" CvTextArgument="Message ChatGPT..." CvType="Text" DesignTimeRectangle="711, 1003, 766, 52" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TEXTAREA prompt-textarea'" FullSelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' type='' class='m-0 w-full resize-none border-0 bg-transparent py-[10px] pr-10 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:py-3.5 md:pr-12 placeholder-black/50 dark:placeholder-white/50 pl-3 md:pl-4' aaname='' /&gt;" Guid="3db27a44-0ff8-43fe-88fe-89469e032da7" InformativeScreenshot="8718ec4d66bdcb4c7e44fe01ee005a2a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="5" DisplayName="Click Enter For Name" sap:VirtualizedContainerService.HintSize="534,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <uix:NGetText DisplayName="Get Name" sap:VirtualizedContainerService.HintSize="534,158" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" TextString="[name]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://chat.openai.com/c/13bf483c-d4b6-4403-b0cd-e57161284939" CvTextArea="769, 312, 186, 14" CvType="AnyWordGroup" DesignTimeRectangle="770, 305, 613, 28" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Full Name:'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='' /&gt;" Guid="8023fe30-73bc-4575-8dcd-199a919e1203" InformativeScreenshot="6ad15b002859fc45b8c949e3cf26d3cb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="768, 216, 546, 17" CvTextArgument="give me random unique full name with structure like this, Full name: John Doe" CvType="Text" DesignTimeRectangle="770, 211, 543, 24" ElementType="Text" FriendlyName="'give me'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='__next' tag='DIV' aaname='give me random unique full name with structure like this, Full name: John Doe. Just name dont write anything else' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='__next' tag='DIV' aaname='give me random unique full name with structure like this, Full name: John Doe' type='' class='' check:text='give me random unique full name with structure like this, Full name: John Doe' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534,614" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch.Try>
+                <Sequence sap:VirtualizedContainerService.HintSize="496,381" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Name" sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;Name: &quot; + name.Split(&quot;:&quot;)(1)]" />
+                  <Assign DisplayName="Assign New Name" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[name.Split(":")(1).Substring(0, name.Split(":")(1).Length - 1)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Name" sap:VirtualizedContainerService.HintSize="388,145" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Name: &quot; + name]" />
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Generate Random Summary" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534,219" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Text="Create random unique summary for a cv, dont give me any field to fill, fill it yourself and the structure of summary looks like, summary: " Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://chat.openai.com/" CvTextArea="726, 1022, 143, 16" CvTextArgument="Message ChatGPT..." CvType="Text" DesignTimeRectangle="711, 1003, 766, 52" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TEXTAREA prompt-textarea'" FullSelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' type='' class='m-0 w-full resize-none border-0 bg-transparent py-[10px] pr-10 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:py-3.5 md:pr-12 placeholder-black/50 dark:placeholder-white/50 pl-3 md:pl-4' aaname='' /&gt;" Guid="3db27a44-0ff8-43fe-88fe-89469e032da7" InformativeScreenshot="8718ec4d66bdcb4c7e44fe01ee005a2a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="5" DisplayName="Click Enter For Summary" sap:VirtualizedContainerService.HintSize="534,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <uix:NGetText DisplayName="Get Summary" sap:VirtualizedContainerService.HintSize="534,158" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" TextString="[summary]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://chat.openai.com/c/ca7064f3-4072-4021-a2ca-4fb92ba70b22" DesignTimeRectangle="770, 545, 613, 168" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Summary: Results-driven'" FullSelectorArgument="&lt;webctrl idx='2' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='P' class='' /&gt;" Guid="ec8c0cba-2004-48d2-adfb-6e6a750c1161" InformativeScreenshot="e234fa0565241a7ac576338c1d5d9ae9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="770, 427, 613, 48" ElementType="Text" FriendlyName="'Create random'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='__next' tag='DIV' aaname='Create random unique summary for a cv, dont give me any field to fill, fill it yourself and the structure of summary looks like, summary: ' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='__next' tag='DIV' aaname='Create random unique summary for a cv, dont give me any field to fill, fill it yourself and the structure of summary looks like, summary: ' type='' class='' check:text='Create random unique summary for a cv, dont give me any field to fill, fill it yourself and the' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:LogMessage DisplayName="Log Summary" sap:VirtualizedContainerService.HintSize="534,145" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Summary: &quot; + summary.Split(&quot;: &quot;)(1)]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Generate Education" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534,219" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Text="give me just one random education info with this structure,  Name of the UNIVERSITY, field &amp; GPA. Dont add anything, also add comma end of every line" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://chat.openai.com/" CvTextArea="726, 1022, 143, 16" CvTextArgument="Message ChatGPT..." CvType="Text" DesignTimeRectangle="711, 1003, 766, 52" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TEXTAREA prompt-textarea'" FullSelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' type='' class='m-0 w-full resize-none border-0 bg-transparent py-[10px] pr-10 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:py-3.5 md:pr-12 placeholder-black/50 dark:placeholder-white/50 pl-3 md:pl-4' aaname='' /&gt;" Guid="3db27a44-0ff8-43fe-88fe-89469e032da7" InformativeScreenshot="8718ec4d66bdcb4c7e44fe01ee005a2a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="5" DisplayName="Click Enter For Education" sap:VirtualizedContainerService.HintSize="534,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <uix:NGetText DisplayName="Get Education" sap:VirtualizedContainerService.HintSize="534,158" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" TextString="[education]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://chat.openai.com/c/2e1545f5-ac69-4d13-a6e5-0cdcc6972b2f" CvTextArea="765, 907, 247, 14" CvType="AnyWordGroup" DesignTimeRectangle="766, 900, 613, 28" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Harvard University,'" FullSelectorArgument="&lt;webctrl idx='3' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='P' class='' /&gt;" Guid="288991a5-7a5e-4d1f-81ee-11700c692d94" InformativeScreenshot="66c3a4dcada64b3b02df6b3f58f1a9ee.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="766, 782, 613, 48" ElementType="Text" FriendlyName="'give me'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='__next' tag='DIV' aaname='give me just one random education info with this structure,  Name of the UNIVERSITY, field &amp;amp; GPA. Dont add anything, also add comma end of every line' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='__next' tag='DIV' aaname='give me just one random education info with this structure,  Name of the UNIVERSITY, field &amp;amp; GPA. Dont add anything, also add comma end of every line' type='' class='' check:text='give me just one random education info with this structure,  Name of the UNIVERSITY, field &amp;amp; GPA.' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:LogMessage DisplayName="Log Education" sap:VirtualizedContainerService.HintSize="534,145" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Education: &quot; + education.Split(&quot;,&quot;)(0)]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Generate Experience" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534,219" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Text="Create random unique professional experience for a cv, dont give me any field to fill, fill it yourself,  max 3 experience and explain them at least with 1 sentence. Don't write anything like Experience 1:, Experience 2:, etc." Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://chat.openai.com/" CvTextArea="726, 1022, 143, 16" CvTextArgument="Message ChatGPT..." CvType="Text" DesignTimeRectangle="711, 1003, 766, 52" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TEXTAREA prompt-textarea'" FullSelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' type='' class='m-0 w-full resize-none border-0 bg-transparent py-[10px] pr-10 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:py-3.5 md:pr-12 placeholder-black/50 dark:placeholder-white/50 pl-3 md:pl-4' aaname='' /&gt;" Guid="3db27a44-0ff8-43fe-88fe-89469e032da7" InformativeScreenshot="8718ec4d66bdcb4c7e44fe01ee005a2a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="5" DisplayName="Click Enter For Generate Experience" sap:VirtualizedContainerService.HintSize="534,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <uix:NGetText DisplayName="Get Experience" sap:VirtualizedContainerService.HintSize="534,158" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" TextString="[experience]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://chat.openai.com/c/da5511a2-b48a-4d9e-8e01-5aea8bbe4041" DesignTimeRectangle="766, 552, 613, 376" DesignTimeScaleFactor="1" FriendlyName="'Senior Product'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='49' parentid='__next' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='markdown prose w-full break-words dark:prose-invert dark' parentid='__next' tag='DIV' aaname='' /&gt;" Guid="db968e04-f49f-4c54-a280-b61e51d70c6c" InformativeScreenshot="0f6c783bf09d72fe1fad4e884f88ad49.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="766, 410, 613, 72" ElementType="Text" FriendlyName="'Create random'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='__next' tag='DIV' aaname='Create random unique professional experience for a cv, dont give me any field to fill, fill it yourself,  max 3 experience and explain them at least with 1 sentence. Don&amp;apos;t write anything like Experience 1:, Experience 2:, etc.' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='__next' tag='DIV' aaname='Create random unique professional experience for a cv, dont give me any field to fill, fill it yourself,  max 3 experience and explain them at least with 1 sentence. Don&amp;apos;t write anything like Experience 1:, Experience 2:, etc.' type='' class='' check:text='Create random unique professional experience for a cv, dont give me any field to fill, fill it' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:LogMessage DisplayName="Log Experience" sap:VirtualizedContainerService.HintSize="534,145" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Experience: &quot; + experience.Split(&quot;.&quot;)(0) + &quot;.&quot;]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Generate Projects" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="534,219" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Text="Create random unique projects for a cv, dont give me any field to fill, fill it yourself,  max 3 projects and explain them at least with 1 sentence. Don't write anything like Project 1:, Project 2:, etc." Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://chat.openai.com/" CvTextArea="726, 1022, 143, 16" CvTextArgument="Message ChatGPT..." CvType="Text" DesignTimeRectangle="711, 1003, 766, 52" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TEXTAREA prompt-textarea'" FullSelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='prompt-textarea' tag='TEXTAREA' type='' class='m-0 w-full resize-none border-0 bg-transparent py-[10px] pr-10 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:py-3.5 md:pr-12 placeholder-black/50 dark:placeholder-white/50 pl-3 md:pl-4' aaname='' /&gt;" Guid="3db27a44-0ff8-43fe-88fe-89469e032da7" InformativeScreenshot="8718ec4d66bdcb4c7e44fe01ee005a2a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="5" DisplayName="Click Enter For Projects" sap:VirtualizedContainerService.HintSize="534,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+            <uix:NGetText DisplayName="Get Projects" sap:VirtualizedContainerService.HintSize="534,158" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" TextString="[projects]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://chat.openai.com/c/da5511a2-b48a-4d9e-8e01-5aea8bbe4041" DesignTimeRectangle="766, 580, 613, 348" DesignTimeScaleFactor="1" FriendlyName="'Integrated Customer'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='44' parentid='__next' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='markdown prose w-full break-words dark:prose-invert dark' parentid='__next' tag='DIV' aaname='' /&gt;" Guid="45a1e631-9619-4418-9505-d681b4c8d0ed" InformativeScreenshot="04fa37295a652f85b3ef477dc4bd00b9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="766, 438, 613, 72" ElementType="Text" FriendlyName="'Create random'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='__next' tag='DIV' aaname='Create random unique projects for a cv, dont give me any field to fill, fill it yourself,  max 3 projects and explain them at least with 1 sentence. Don&amp;apos;t write anything like Project 1:, Project 2:, etc.' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='__next' tag='DIV' aaname='Create random unique projects for a cv, dont give me any field to fill, fill it yourself,  max 3 projects and explain them at least with 1 sentence. Don&amp;apos;t write anything like Project 1:, Project 2:, etc.' type='' class='' check:text='Create random unique projects for a cv, dont give me any field to fill, fill it yourself,  max 3' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:LogMessage DisplayName="Log Projects" sap:VirtualizedContainerService.HintSize="534,145" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Projects: &quot; + projects.Split(&quot;.&quot;)(0) + &quot;.&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Dots" sap:VirtualizedContainerService.HintSize="534,158" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://chat.openai.com/c/da5511a2-b48a-4d9e-8e01-5aea8bbe4041" DesignTimeRectangle="212, 227, 36, 36" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'BUTTON radix-:r6t'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='absolute bottom-0 right-0 top-0 flex w-9 items-center justify-center rounded-lg text-token-text-tertiary transition hover:text-token-text-secondary radix-state-open:text-token-text-secondary' aaname='' /&gt;" Guid="fa4dde8c-7075-4303-8b04-d7456688d260" InformativeScreenshot="36976e70fc4d37e0d7dfd9fe4192a956.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Random Unique Full Name' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Delete chat" sap:VirtualizedContainerService.HintSize="534,158" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://chat.openai.com/c/da5511a2-b48a-4d9e-8e01-5aea8bbe4041" CvTextArea="254, 369, 73, 13" CvTextArgument="Delete chat" CvType="Text" DesignTimeRectangle="219, 355, 186, 40" DesignTimeScaleFactor="1" FriendlyName="'Delete chat'" FullSelectorArgument="&lt;webctrl aaname='Delete chat' aria-role='menuitem' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Delete chat' aria-role='menuitem' tag='DIV' type='' class='flex gap-2 m-1.5 rounded p-2.5 text-sm cursor-pointer focus:ring-0 hover:bg-black/5 dark:hover:bg-white/5 radix-disabled:pointer-events-none radix-disabled:opacity-50 group text-red-500' check:innerText='Delete chat' /&gt;" Guid="59b5a498-9b6a-415e-9ebc-6cc38b9b63e1" InformativeScreenshot="54986e1922b284198560a79589afe514.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Random Unique Full Name' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Delete" sap:VirtualizedContainerService.HintSize="534,158" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d1d9a5d4-a814-4c9e-a194-010e8dd2dcd5" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://chat.openai.com/c/73c0d90c-6ca9-49cd-8cad-ca02c49c211c" CvElementArea="1097, 636, 75, 46" CvTextArea="1113, 653, 44, 13" CvTextArgument="Delete" CvType="Button" DesignTimeRectangle="1101, 640, 67, 38" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl aaname='Delete' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Delete' tag='BUTTON' type='' class='btn relative btn-danger' check:innerText='Delete' /&gt;" Guid="f4723d32-b799-45df-b68e-4996fd100c73" InformativeScreenshot="476be91aa6c90d47514dcde5ca863fa2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="1097, 636, 75, 46" CvTextArea="1113, 653, 44, 13" CvTextArgument="Delete" CvType="Button" DesignTimeRectangle="1114, 649, 41, 20" ElementType="Text" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl aaname='Delete' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Delete' tag='DIV' type='' class='flex w-full gap-2 items-center justify-center' check:innerText='Delete' /&gt;" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1912, -8, 1936, 1096" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAAdQAAAHUB48IHZQAABK5JREFUWEe9V1lTU0kU5s0/4/hL5o/4MA9ThTDO4lJqzdSU5UKNjpoAggOSsMuiiJqwyi7IEoEAYRFkRxK2bGfOd6Avfe9tUEvxVH2V9Hq+22frzvjx7M82ZBZ7zmT5cm+f83mHGTEGfSVi50q8Q4xb2f78H5z6rD8/1eec4sn3GClt8bdGionchS4bgX3lnqBhwcnA7w0oEkKAO/Hl5sknhEyf944QgM2547OO/VpNCbWND9P6Vowg8WSCwovzVPQ6QFmG+Z9AMrPEe5q/3pNjGHQhr7mBdhNxSqXTNLX8gTomQtQ3HabNnW0hM/x+mi5XF9GftT66UFFo3MOJLJ/nJo4f3m6coHDreSUlkklaiX6k241VtrHzZfk0sbQgJHSZW1uhh62NtrkucHRksC2ixkENOGZ8/V91fls/iE0eKI/yScA8tf2d1DI2RBvbW9LfMzVG2f482zoNmzgB04Agr+U5Dc1FKM0bYVPVf7mqiDon3lGazbHHxOrfdstJ6GvRfh0OCYlXoX7bmA4jgfOl+fRmekIWw+aQwrYXMobfnfiekOqZGqcrT4qtdTcaKmStagOjC7OUSCXpSvXhPB1GAt2To6K0PTxC/q5m+X8vUCdjg3wisG9OY7U1//rTMlY0J/NWY5tUcEAWuPuqVvoretusPh0uArArpDcyLm1sBtEJqM0uVD4S0yAcg+/e0uOOIIdoVOaPL76XE/mlNE/a8A+lQ4eLACbiyC5V/SdtE4GqvnYhsbW3K2OtY8OiCOO/su0bBnuFFMzXwb4CaR499CEdLgKza8s0u7pstU0EsPnix3XyND2j+4F6WthYs9pq3bWax+xHYfEVSFl3izWmw0Vgfn2VIiuLVttEAN6tvhjI9ueKKSAjnJD+ri+1rY9zDoHfmMLRRaB/ZlJiHkeJNjIgpJjTLdq6D+iAs0Y4Q+o+oSKisrdd9ijpDLrWuQgUcPaCIKGgDdawKeId0YHEcxSB0Pys/M/n/AEpbHspbRDZZn9ButbXAC4CADZKplLi1apPt2kXE9HjHeaAWRSBf148EQLq1AAQh5+otoKRABQrGZmfsdn0zssacVLUBeT6XDbR0uaGmO04AtMrS+Jfqq1gJBAIDcgGKiRxGrDpHwdVLoudTs2J7e6wh7dSKXv5UQQQ0tgDdUHpUDASgDIIyioKEOoBBAWnvKdVYhqO1jQ6aJVe3QecBFA3IP9yVlQ6FIwEfJ1NsgDOpPoeBJ/SB453SMhhFihEmDkJwFlVQeo2fD1gJHCRU+xeIiF1Hset+hERuuKrXIj6IvuOuc0FShUs+AUE1RKCOXre0GEkACDdQlDxfit/aBtDjng22CMkkW7xlSp1A8qEA5xTcHL6WieOvZAgx0NgeyipG+iS3+ju/jUMFxUUHH0NrmSICFPMm4ATOPZKhlDDHTCVTolSJTOrS667H65rCE+kXiexo5CBF4tpwAkkHlwqfi8vkMsoBNUQeQJejjQMi+/E4+wDh0XpU8jAc4n/fPFrCBEC5TAHYhzJqJnDEo5pmn8U9h8m/FwyDX4PHD7N+LlkmnDSEAKKBJ5L3Jl0TjpJWAQU8FzCiwWPhs95M3wdvPQ/jkK+9Hd0g/8AAAAASUVORK5CYII=" InformativeScreenshot="16d1e2ccedc92a5bf463930128ed9b87.jpg" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" Title="ChatGPT" Url="https://chat.openai.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <p:WordApplicationScope DisplayName="Creating New CV" FilePath="[name + &quot;_CV&quot; + &quot;.docx&quot;]" sap:VirtualizedContainerService.HintSize="630,6164" sap2010:WorkflowViewState.IdRef="WordApplicationScope_2">
+      <p:WordApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WordDocument">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Create New CV" sap:VirtualizedContainerService.HintSize="496,5974" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Select Orientation Middle" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="NClick_9" InScope="[WordDocumentScope]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="WordDocumentScope" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="494, 108, 22, 19" CvType="Icon" DesignTimeRectangle="494, 107, 22, 23" DesignTimeScaleFactor="1" FriendlyName="'Ortala'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Paragraf' /&gt;&lt;uia automationid='AlignCenter' cls='NetUIRibbonButton' name='Ortala' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Paragraf' /&gt;&lt;uia automationid='AlignCenter' cls='NetUIRibbonButton' name='Ortala' role='Düğme' check:fulltext='Ortala' /&gt;" Guid="83d960a7-c356-4fa9-b590-752f1ec44689" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAbCAYAAABiFp9rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVEhL7dExCgAgDARB35Yf54URCyHFFnKIFkkxZTxYh7vHCz0k6yHZ/yEzk9BbS8E/ojyEbrNC6SjPCXprKZRuozyEbrOC6W7pIVkPiTwm2MEtZf2d9/EAAAAASUVORK5CYII=" InformativeScreenshot="408aaeb9e309ae4e8ba95658fa42f650.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Deneme.docx - Word' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Change Size For Header" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="NTypeInto_18" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Text="22[k(Enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvElementArea="280, 75, 51, 25" CvType="InputBox" DesignTimeRectangle="282, 78, 34, 19" DesignTimeScaleFactor="1" FriendlyName="'11'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' role='Düzenleme Kutusu' automationid='' check:text='11' /&gt;" Guid="04a1fedc-6da5-4029-8434-e5fe1ec25f7d" InformativeScreenshot="b644651d721edfa3cd94d97abeab4da6.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Deneme.docx - Word' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Bold" sap:VirtualizedContainerService.HintSize="434,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_15" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Shortcuts="[d(hk)][d(ctrl)]k[u(ctrl)][u(hk)]" Version="V3" />
+            <p:WordAppendText DisplayName="Write Name" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="WordAppendText_11" NewLine="False" Text="[name]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Change Size For Sections" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="NTypeInto_19" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Text="14[k(Enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvElementArea="280, 75, 51, 25" CvType="InputBox" DesignTimeRectangle="282, 78, 34, 19" DesignTimeScaleFactor="1" FriendlyName="'11'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' role='Düzenleme Kutusu' automationid='' check:text='11' /&gt;" Guid="04a1fedc-6da5-4029-8434-e5fe1ec25f7d" InformativeScreenshot="b644651d721edfa3cd94d97abeab4da6.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Deneme.docx - Word' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,53" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Add Line" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_10" InScope="[WordDocumentScope]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="WordDocumentScope" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CvElementArea="657, 107, 21, 20" CvType="Icon" DesignTimeRectangle="657, 107, 22, 23" DesignTimeScaleFactor="1" FriendlyName="'Kenarlıklar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Paragraf' /&gt;&lt;uia cls='NetUIRibbonButton' name='Kenarlıklar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Paragraf' /&gt;&lt;uia cls='NetUIRibbonButton' name='Kenarlıklar' role='Düğme' automationid='' check:fulltext='Kenarlıklar' /&gt;" Guid="4d6b8287-0626-4464-bce8-4c65c69b1032" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAbCAYAAABiFp9rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABfSURBVEhL7ZFBCgAhDAP3bf1xX1jxkIvESsvixQSGgocJwc/d4wYqavNQkZnFTOUyD9gWdcI84LhoTfbOPECL0jAPOC6qXOYB+qM0zAMeW1SFecC26G9U1EZFbS4VeQxyOq/uhk70hwAAAABJRU5ErkJggg==" InformativeScreenshot="ed51bf1d6f04acd555ce1f62712529c2.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Deneme.docx - Word' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <p:WordAppendText DisplayName="Write Summary Header" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="WordAppendText_12" Text="SUMMARY" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Select Orientation Middle" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="NClick_11" InScope="[WordDocumentScope]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="WordDocumentScope" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="468, 105, 26, 26" CvType="Icon" DesignTimeRectangle="470, 107, 22, 23" DesignTimeScaleFactor="1" FriendlyName="'Sola Hizala'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Paragraf' /&gt;&lt;uia automationid='AlignLeft' cls='NetUIRibbonButton' name='Sola Hizala' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Paragraf' /&gt;&lt;uia automationid='AlignLeft' cls='NetUIRibbonButton' name='Sola Hizala' role='Düğme' check:fulltext='Sola Hizala' /&gt;" Guid="069cecd7-064c-4046-93e0-b0c5db5e780d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAbCAYAAABiFp9rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVEhL7dAxDkBBBEXRWZtYoo1Y4Uwr818hgq+Y4pTcsFR1d+gPMXMJGBKRVC8UNitERCF2x6yLMrhC6C2InbnNuiiDK4Te5GF3zLoogyuE3oLYmdusizK8UNj/oQqfULWmkO4DO3lBEA2SHbcAAAAASUVORK5CYII=" InformativeScreenshot="33dfa01ad3e8fe926c007ae8325b04f5.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Deneme.docx - Word' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Change Size For Sections" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="NTypeInto_20" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Text="11[k(Enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvElementArea="280, 75, 51, 25" CvType="InputBox" DesignTimeRectangle="282, 78, 34, 19" DesignTimeScaleFactor="1" FriendlyName="'11'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' role='Düzenleme Kutusu' automationid='' check:text='11' /&gt;" Guid="04a1fedc-6da5-4029-8434-e5fe1ec25f7d" InformativeScreenshot="b644651d721edfa3cd94d97abeab4da6.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Deneme.docx - Word' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Light" sap:VirtualizedContainerService.HintSize="434,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_16" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Shortcuts="[d(hk)][d(ctrl)]k[u(ctrl)][u(hk)]" Version="V3" />
+            <p:WordAppendText DisplayName="Write Summary" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="WordAppendText_13" Text="[summary.Split(&quot;:&quot;)(1)]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Change Size For Sections" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="NTypeInto_21" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Text="14[k(Enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvElementArea="280, 75, 51, 25" CvType="InputBox" DesignTimeRectangle="282, 78, 34, 19" DesignTimeScaleFactor="1" FriendlyName="'11'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' role='Düzenleme Kutusu' automationid='' check:text='11' /&gt;" Guid="04a1fedc-6da5-4029-8434-e5fe1ec25f7d" InformativeScreenshot="b644651d721edfa3cd94d97abeab4da6.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Deneme.docx - Word' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Bold" sap:VirtualizedContainerService.HintSize="434,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_17" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Shortcuts="[d(hk)][d(ctrl)]k[u(ctrl)][u(hk)]" Version="V3" />
+            <p:WordAppendText DisplayName="Write Education Header" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="WordAppendText_14" Text="EDUCATION" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Change Size For Sections" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="NTypeInto_22" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Text="11[k(Enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvElementArea="280, 75, 51, 25" CvType="InputBox" DesignTimeRectangle="282, 78, 34, 19" DesignTimeScaleFactor="1" FriendlyName="'11'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' role='Düzenleme Kutusu' automationid='' check:text='11' /&gt;" Guid="04a1fedc-6da5-4029-8434-e5fe1ec25f7d" InformativeScreenshot="b644651d721edfa3cd94d97abeab4da6.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Deneme.docx - Word' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Light" sap:VirtualizedContainerService.HintSize="434,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_18" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Shortcuts="[d(hk)][d(ctrl)]k[u(ctrl)][u(hk)]" Version="V3" />
+            <p:WordAppendText DisplayName="Write Education" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="WordAppendText_15" Text="[education.Split(&quot;,&quot;)(0) + Environment.NewLine + education.Split(&quot;,&quot;)(1) + &quot; &amp; &quot; + education.Split(&quot;,&quot;)(2)]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Change Size For Sections" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="NTypeInto_23" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Text="14[k(Enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvElementArea="280, 75, 51, 25" CvType="InputBox" DesignTimeRectangle="282, 78, 34, 19" DesignTimeScaleFactor="1" FriendlyName="'11'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' role='Düzenleme Kutusu' automationid='' check:text='11' /&gt;" Guid="04a1fedc-6da5-4029-8434-e5fe1ec25f7d" InformativeScreenshot="b644651d721edfa3cd94d97abeab4da6.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Deneme.docx - Word' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Bold" sap:VirtualizedContainerService.HintSize="434,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_19" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Shortcuts="[d(hk)][d(ctrl)]k[u(ctrl)][u(hk)]" Version="V3" />
+            <p:WordAppendText DisplayName="Write Experience Header" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="WordAppendText_16" Text="PROFESSIONAL EXPERIENCE" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Change Size For Sections" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="NTypeInto_24" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Text="11[k(Enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvElementArea="280, 75, 51, 25" CvType="InputBox" DesignTimeRectangle="282, 78, 34, 19" DesignTimeScaleFactor="1" FriendlyName="'11'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' role='Düzenleme Kutusu' automationid='' check:text='11' /&gt;" Guid="04a1fedc-6da5-4029-8434-e5fe1ec25f7d" InformativeScreenshot="b644651d721edfa3cd94d97abeab4da6.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Deneme.docx - Word' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Light" sap:VirtualizedContainerService.HintSize="434,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_20" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Shortcuts="[d(hk)][d(ctrl)]k[u(ctrl)][u(hk)]" Version="V3" />
+            <p:WordAppendText DisplayName="Write Professional Experience" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="WordAppendText_17" Text="[experience.Split(&quot;.&quot;)(0) + Environment.NewLine + experience.Split(&quot;.&quot;)(1) + Environment.NewLine + experience.Split(&quot;.&quot;)(2)]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Change Size For Sections" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="NTypeInto_25" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Text="14[k(Enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvElementArea="280, 75, 51, 25" CvType="InputBox" DesignTimeRectangle="282, 78, 34, 19" DesignTimeScaleFactor="1" FriendlyName="'11'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' role='Düzenleme Kutusu' automationid='' check:text='11' /&gt;" Guid="04a1fedc-6da5-4029-8434-e5fe1ec25f7d" InformativeScreenshot="b644651d721edfa3cd94d97abeab4da6.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Deneme.docx - Word' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Bold" sap:VirtualizedContainerService.HintSize="434,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_21" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Shortcuts="[d(hk)][d(ctrl)]k[u(ctrl)][u(hk)]" Version="V3" />
+            <p:WordAppendText DisplayName="Write Projects Header" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="WordAppendText_18" Text="PROJECTS" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Change Size For Sections" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="NTypeInto_26" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Text="11[k(Enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CvElementArea="280, 75, 51, 25" CvType="InputBox" DesignTimeRectangle="282, 78, 34, 19" DesignTimeScaleFactor="1" FriendlyName="'11'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Giriş' /&gt;&lt;uia cls='NetUIChunk' name='Yazı Tipi' /&gt;&lt;uia automationid='FontSize' cls='NetUIComboboxAnchor' name='Yazı Tipi Boyutu' /&gt;&lt;uia cls='NetUITextbox' name='Yazı Tipi Boyutu' role='Düzenleme Kutusu' automationid='' check:text='11' /&gt;" Guid="04a1fedc-6da5-4029-8434-e5fe1ec25f7d" InformativeScreenshot="b644651d721edfa3cd94d97abeab4da6.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Deneme.docx - Word' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Light" sap:VirtualizedContainerService.HintSize="434,180" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_22" InScope="[WordDocumentScope]" ScopeIdentifier="WordDocumentScope" Shortcuts="[d(hk)][d(ctrl)]k[u(ctrl)][u(hk)]" Version="V3" />
+            <p:WordAppendText DisplayName="Write Projects" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="WordAppendText_19" Text="[projects.Split(&quot;.&quot;)(0) + Environment.NewLine + projects.Split(&quot;.&quot;)(1) + Environment.NewLine + projects.Split(&quot;.&quot;)(2)]" />
+          </Sequence>
+        </ActivityAction>
+      </p:WordApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </p:WordApplicationScope>
+  </Sequence>
+</Activity>

@@ -1,0 +1,359 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="982,1960" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="592,1895" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="intResultNumber" />
+      <Variable x:TypeArguments="x:Int32" Name="intBalance">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="1000" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="currentBet" />
+      <Variable x:TypeArguments="x:Int32" Name="intCurrentBet" />
+      <Variable x:TypeArguments="x:Int32" Name="intTargetTotalBet" />
+      <Variable x:TypeArguments="x:String" Name="resultNumber" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Roulette Website" sap:VirtualizedContainerService.HintSize="530,1784" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="1fe48c43-637a-4cf7-a414-e4049c14b5ae" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1567" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Full Screen" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_21" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1fe48c43-637a-4cf7-a414-e4049c14b5ae" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable Accuracy="0.7" BrowserURL="https://roulette77.co.za/european-roulette" DesignTimeRectangle="991, 360, 58, 85" DesignTimeScaleFactor="1" FriendlyName="'chrome.exe Play'" Guid="08da2587-4deb-4e94-8b34-a3baabf1acdc" ImageBase64="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" InformativeScreenshot="24eed7f06215329b0e2d6f86549be732.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Play European Roulette Online Free - Tactics and Rules | Roulette77 | South Africa' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Show Got Number" sap:VirtualizedContainerService.HintSize="434,85" sap2010:WorkflowViewState.IdRef="MessageBox_20" Text="[&quot;&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Bet Empty" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_22" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1fe48c43-637a-4cf7-a414-e4049c14b5ae" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://roulette77.co.za/european-roulette" DesignTimeRectangle="993, 410, 54, 81" DesignTimeScaleFactor="1" FriendlyName="'chrome.exe Play'" Guid="91ae46c1-350d-4a54-88d2-b245a44cc055" ImageBase64="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" InformativeScreenshot="61204a64fccefd6352d5b6c659d8c903.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Play European Roulette Online Free - Tactics and Rules | Roulette77 | South Africa' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <TryCatch DisplayName="Try Getting Number First" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get Number First" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="GetOCRText_19">
+                  <ui:GetOCRText.OCREngine>
+                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                      <ActivityFunc.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                      </ActivityFunc.Argument>
+                      <ui:GoogleOCR DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" AllowedCharacters="0123456789" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="GoogleOCR_17" Image="[Image]" NoopExecution="False" />
+                    </ActivityFunc>
+                  </ui:GetOCRText.OCREngine>
+                  <ui:GetOCRText.Target>
+                    <ui:Target Element="{x:Null}" Id="7970e625-6772-4d89-92a8-875cdded232a" InformativeScreenshot="dd85a63a5b2689d1bc01dce1bf264624" Selector="&lt;webctrl src='_template_desktop-game-european.htm' tag='IFRAME' /&gt;&lt;webctrl id='animation_container' tag='DIV' /&gt;" TimeoutMS="3000">
+                      <ui:Target.ClippingRegion>
+                        <ui:Region Rectangle="44, 56, 27, 25" />
+                      </ui:Target.ClippingRegion>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:GetOCRText.Target>
+                  <ui:GetOCRText.Text>
+                    <OutArgument x:TypeArguments="x:String">[resultNumber]</OutArgument>
+                  </ui:GetOCRText.Text>
+                </ui:GetOCRText>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="480,705" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <TryCatch DisplayName="Try Getting Number Second" sap:VirtualizedContainerService.HintSize="474,636" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                      <TryCatch.Try>
+                        <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get Number Second" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="GetOCRText_21">
+                          <ui:GetOCRText.OCREngine>
+                            <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                              <ActivityFunc.Argument>
+                                <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                              </ActivityFunc.Argument>
+                              <ui:GoogleOCR DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" AllowedCharacters="0123456789" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="GoogleOCR_19" Image="[Image]" NoopExecution="False" />
+                            </ActivityFunc>
+                          </ui:GetOCRText.OCREngine>
+                          <ui:GetOCRText.Target>
+                            <ui:Target Element="{x:Null}" Id="7970e625-6772-4d89-92a8-875cdded232a" InformativeScreenshot="bd8d49993e10226f4177534ca69e7432" Selector="&lt;webctrl src='_template_desktop-game-european.htm' tag='IFRAME' /&gt;&lt;webctrl id='animation_container' tag='DIV' /&gt;">
+                              <ui:Target.ClippingRegion>
+                                <ui:Region Rectangle="41, 56, 28, 24" />
+                              </ui:Target.ClippingRegion>
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:GetOCRText.Target>
+                          <ui:GetOCRText.Text>
+                            <OutArgument x:TypeArguments="x:String">[resultNumber]</OutArgument>
+                          </ui:GetOCRText.Text>
+                        </ui:GetOCRText>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="440,473" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <TryCatch DisplayName="Try Getting Number Third" sap:VirtualizedContainerService.HintSize="434,404" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                              <TryCatch.Try>
+                                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get Number Third" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="GetOCRText_20">
+                                  <ui:GetOCRText.OCREngine>
+                                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                      <ActivityFunc.Argument>
+                                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                      </ActivityFunc.Argument>
+                                      <ui:GoogleOCR DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" AllowedCharacters="0123456789" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="GoogleOCR_18" Image="[Image]" NoopExecution="False" />
+                                    </ActivityFunc>
+                                  </ui:GetOCRText.OCREngine>
+                                  <ui:GetOCRText.Target>
+                                    <ui:Target Element="{x:Null}" Id="7970e625-6772-4d89-92a8-875cdded232a" InformativeScreenshot="48d1eccc10d110a758a7c219c6163753" Selector="&lt;webctrl src='_template_desktop-game-european.htm' tag='IFRAME' /&gt;&lt;webctrl id='animation_container' tag='DIV' /&gt;">
+                                      <ui:Target.ClippingRegion>
+                                        <ui:Region Rectangle="47, 56, 18, 24" />
+                                      </ui:Target.ClippingRegion>
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:GetOCRText.Target>
+                                  <ui:GetOCRText.Text>
+                                    <OutArgument x:TypeArguments="x:String">[resultNumber]</OutArgument>
+                                  </ui:GetOCRText.Text>
+                                </ui:GetOCRText>
+                              </TryCatch.Try>
+                              <TryCatch.Catches>
+                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,241" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ActivityAction x:TypeArguments="s:Exception">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                    </ActivityAction.Argument>
+                                    <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get Number Fourth" sap:VirtualizedContainerService.HintSize="334,172" sap2010:WorkflowViewState.IdRef="GetOCRText_22">
+                                      <ui:GetOCRText.OCREngine>
+                                        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                          <ActivityFunc.Argument>
+                                            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                          </ActivityFunc.Argument>
+                                          <ui:GoogleOCR DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" AllowedCharacters="0123456789" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="GoogleOCR_20" Image="[Image]" NoopExecution="False" />
+                                        </ActivityFunc>
+                                      </ui:GetOCRText.OCREngine>
+                                      <ui:GetOCRText.Target>
+                                        <ui:Target Element="{x:Null}" Id="7970e625-6772-4d89-92a8-875cdded232a" InformativeScreenshot="b8b087c2740501d7e17e64d826d78043" Selector="&lt;webctrl src='_template_desktop-game-european.htm' tag='IFRAME' /&gt;&lt;webctrl id='animation_container' tag='DIV' /&gt;">
+                                          <ui:Target.ClippingRegion>
+                                            <ui:Region Rectangle="43, 57, 26, 21" />
+                                          </ui:Target.ClippingRegion>
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:GetOCRText.Target>
+                                      <ui:GetOCRText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[resultNumber]</OutArgument>
+                                      </ui:GetOCRText.Text>
+                                    </ui:GetOCRText>
+                                  </ActivityAction>
+                                </Catch>
+                              </TryCatch.Catches>
+                            </TryCatch>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Show Got Number" sap:VirtualizedContainerService.HintSize="434,85" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[resultNumber]" />
+            <Assign DisplayName="Assign Converted Result" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_16">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[intResultNumber]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(resultNumber.Replace(" ", "").Trim)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign Balance" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_17">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[intBalance]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">1000</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign Current Bet" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_18">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[intCurrentBet]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">1</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Play Free Button" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1fe48c43-637a-4cf7-a414-e4049c14b5ae" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://roulette77.co.za/european-roulette" CvElementArea="758, 587, 274, 59" CvTextArea="850, 608, 93, 17" CvTextArgument="PLAY FREE" CvType="Button" DesignTimeRectangle="761, 591, 270, 52" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Play free'" FullSelectorArgument="&lt;webctrl aaname='Play free' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Play free' tag='BUTTON' type='' class='content-iframe__overlay-btn game-launcher__btn-play-free game-launcher__btn-play-free--desktop' check:text='Play free' /&gt;" Guid="136fad02-53c2-4e42-9f51-77312909dfff" InformativeScreenshot="7e52d0cf86e29b7bfe1ee9ad3618c343.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*Roulette77*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Full Screen" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_19" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1fe48c43-637a-4cf7-a414-e4049c14b5ae" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://roulette77.co.za/european-roulette" CvElementArea="1137, 307, 36, 33" CvType="Button" DesignTimeRectangle="1140, 308, 33, 31" DesignTimeScaleFactor="1" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl class='game-block__resize' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='game-block__resize' tag='DIV' type='' aaname='' /&gt;" Guid="e4b03e6f-81c0-4381-a793-e19295c2d071" InformativeScreenshot="81bb400d1b0792ca5358cf0edad6c900.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Play European Roulette Online Free - Tactics and Rules | Roulette77 | South Africa' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHfSURBVDhPlZPNK0RhFMbHP2DFwsraDMlwJw1mDMrHfEkmazs1JQsSJeVrZYXdFBtmZSGyt7UlOzUL1mxEuuo4vzPvWz4W8tZT973nnOc857nnRn6ehtVcoKgoaorQgWfeBS7t99Fgo6KqkO75nGxMFeRkrCj5ngEpDgxK5+y4EHM5ja6sfnihuG5ZnpDyZkqWtvrlo2PS0BrtNly2j8rZSFGaFo3k+huJXqrNGjgoD0v+MGG4H8rKR1CUtniPJKIJeVeyULHWlZHm+QlT4ouZ2dhJOFjIyPJprzxepeX9LmV4uEhLOJOTlVja1GTjfX6cAIIK8yHRumji22298Hg/aeD59SYlpemEEUzFktI1ZwQVCGqYRACpdPOdd9d7Df5eO0/JbbuOpo0wmVoIQpyGgHlJPN5LWmFpOjDw7JU8B3l56ijI0agRhEbAhZcE/yKgCc1o6glqyEEW8pBJIqAQ+DvjMSYEjE2tmYghGEMAo97UMApQAnjmHQZjNIa7xTIT7TPyaSDYiWUs8auZqIKYGEr55NRQ63ehynJsx4csgS5IZd6XoGCjQQ7IcdtYXySOXmyVCcCORF8AIWBEVLot/L7KHEdiPxPzYRJO80Nhslsc60yuK/t9NPiP3zkS+QQTXsEbKN57UwAAAABJRU5ErkJggg==" InformativeScreenshot="7f090df00ff2e218d427ada329d93c8a.jpg" Selector="&lt;html app='chrome.exe' title='Play European Roulette Online Free - Tactics and Rules | Roulette77 | South Africa' /&gt;" Title="Play European Roulette Online Free - Tactics and Rules | Roulette77 | South Africa" Url="https://roulette77.co.za/european-roulette" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

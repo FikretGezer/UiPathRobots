@@ -12,12 +12,13 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dt_Places&Sequence_1",
+        "placeToSearch&Sequence_1",
         "toDateSelected&Sequence_1",
         "toDateDay&Sequence_1",
         "fromDateDay&Sequence_1",
         "fromDateMonth&Sequence_1",
         "toDateMonth&Sequence_1",
-        "fromDateSelected&Sequence_2",
         "toDate&Sequence_1",
         "fromDate&Sequence_1"
       ],
@@ -32,6 +33,41 @@
       "ArgumentsSectionElementsOrder": [
         "dt_Places",
         "placeToSearch"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "BrowserOperations.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "fromDateSelected&Sequence_1",
+        "toDateSelected&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "fromDate",
+        "toDate",
+        "fromDateMonth",
+        "toDateMonth",
+        "fromDateDay",
+        "toDateDay",
+        "dt_Places",
+        "placeToSearch"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Assigning Searching Variables.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "fromDate",
+        "toDate",
+        "fromDateMonth",
+        "toDateMonth",
+        "fromDateDay",
+        "toDateDay"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
