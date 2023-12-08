@@ -12,6 +12,7 @@
 ### • [Robot 11: Image Background Remover](#robot-11)
 ### • [Robot 12: Lead Generation](#robot-12)
 ### • [Robot 13: Calendar Picker](#robot-13)
+### • [Robot 14: Creating Random CVs](#robot-14)
 
 ## Robot 1: Clothing Consultant <a name="robot-1"></a>
 ### What This Robot Does?
@@ -321,5 +322,29 @@ Gets three inputs. First input for the place to go, other two for start date and
   • How data looks inside of the Excel file
   <div align="center">    
     <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/21901a90-8d29-4661-a7b5-d4b911e5d023" alt="" />
+  </div>
+</div>
+
+## Robot 14: Creating Random Cvs <a name="robot-14"></a>
+### What This Robot Does?
+### Screenshots
+<div>
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/6b80c1ae-0990-4a4f-80c2-ef2aa6bf1a6a" alt="" />
+  </div>
+</div>
+<div>
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/073c80c8-f82c-422f-8a66-24cdbab1d682" alt="" />
+  </div>
+</div>
+<div>
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/f99fac33-d7e5-4a3f-bdbf-73855036057d" alt="" />
+  </div>
+</div>
+<div>
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/1fd9331b-02bf-4ae0-9616-e087d2be6d73" alt="" />
   </div>
 </div>
