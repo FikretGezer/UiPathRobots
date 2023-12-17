@@ -1,0 +1,55 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "searchInput&Sequence_1",
+        "accountName&Sequence_1",
+        "currentDate&Sequence_1",
+        "previousDate&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GetDatesAndAccName.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "accountName",
+        "previousDate",
+        "currentDate"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SearchAndGetTweets.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "curRowIdx&Sequence_1",
+        "isItAll&Sequence_1",
+        "getTweetDate&Sequence_1",
+        "tweet&Sequence_1",
+        "dt_Out&Sequence_1",
+        "dt_tweets&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "accountName",
+        "searchInput"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
