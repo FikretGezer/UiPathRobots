@@ -13,6 +13,7 @@
 ### • [Robot 12: Lead Generation](#robot-12)
 ### • [Robot 13: Calendar Picker](#robot-13)
 ### • [Robot 14: Creating Random CVs](#robot-14)
+### • [Robot 15: Getting Tweets Between Two Dates](#robot-15)
 
 ## Robot 1: Clothing Consultant <a name="robot-1"></a>
 ### What This Robot Does?
@@ -346,5 +347,29 @@ Gets three inputs. First input for the place to go, other two for start date and
 <div>
   <div align="center">    
     <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/1fd9331b-02bf-4ae0-9616-e087d2be6d73" alt="" />
+  </div>
+</div>
+
+## Robot 15: Getting Tweets Between Two Dates <a name="robot-15"></a>
+### What This Robot Does?
+### Screenshots
+<div>
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/47b5f910-55d4-4cfb-905e-fcd86bc70052" alt="" />
+  </div>
+</div>
+<div>
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/4b45c920-ec0d-43ac-b9a3-8460b007d821" alt="" />
+  </div>
+</div>
+<div>
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/243b6334-5766-4343-a79a-1cb24b747b70" alt="" />
+  </div>
+</div>
+<div>
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/31ef2e02-8c55-4f6d-a653-e7e14461578d" alt="" />
   </div>
 </div>
