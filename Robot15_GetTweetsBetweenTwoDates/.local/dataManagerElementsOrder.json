@@ -15,7 +15,8 @@
         "searchInput&Sequence_1",
         "accountName&Sequence_1",
         "currentDate&Sequence_1",
-        "previousDate&Sequence_1"
+        "previousDate&Sequence_1",
+        "dt_OutTweets&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
@@ -24,7 +25,10 @@
     {
       "Path": "GetDatesAndAccName.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "numberOfDaysInt&Sequence_1",
+        "numberOfDays&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [
         "accountName",
         "previousDate",
@@ -37,16 +41,31 @@
       "Path": "SearchAndGetTweets.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dt_Out&Sequence_1",
         "curRowIdx&Sequence_1",
         "isItAll&Sequence_1",
         "getTweetDate&Sequence_1",
-        "tweet&Sequence_1",
-        "dt_Out&Sequence_1",
-        "dt_tweets&Sequence_1"
+        "tweet&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "previousDate",
+        "currentDate",
+        "dt_tweets",
         "accountName",
         "searchInput"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WriteDataInAnExcelFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_Tweets&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "dt_Out",
+        "accountName"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

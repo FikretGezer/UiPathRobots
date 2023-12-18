@@ -2,11 +2,14 @@
   <x:Members>
     <x:Property Name="searchInput" Type="InArgument(x:String)" />
     <x:Property Name="accountName" Type="InArgument(x:String)" />
+    <x:Property Name="dt_tweets" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="currentDate" Type="InArgument(x:String)" />
+    <x:Property Name="previousDate" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1202,4420</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>910,4420</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SearchAndGetTweets_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -117,23 +120,18 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="SearchAndGetTweets" sap:VirtualizedContainerService.HintSize="920,4355" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_tweets" />
-      <Variable x:TypeArguments="x:String" Name="dt_Out" />
       <Variable x:TypeArguments="x:String" Name="tweet" />
       <Variable x:TypeArguments="x:String" Name="getTweetDate" />
-      <Variable x:TypeArguments="x:Boolean" Name="isItAll">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="isItAll" />
       <Variable x:TypeArguments="x:Int32" Name="curRowIdx" />
+      <Variable x:TypeArguments="x:String" Name="dt_Out" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DataTable="[dt_Tweets]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="858,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Account_x0020_Tag&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Tweet_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Tweet&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:BuildDataTable DataTable="[dt_Tweets]" DisplayName="Create DT for Tweets" sap:VirtualizedContainerService.HintSize="858,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Account_x0020_Tag&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Current_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Previous_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Tweet_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Tweet&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
     <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Twitter" sap:VirtualizedContainerService.HintSize="858,3840" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Always" ScopeGuid="8a558b23-2078-42c6-91c8-43db0595037d" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
@@ -162,14 +160,14 @@
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://twitter.com/search?q=(from%3Airoparator)%20until%3A2023-12-17%20since%3A2023-12-15%20-filter%3Areplies&amp;src=recent_search_click" CvTextArea="763, 263, 50, 14" CvTextArgument="En Son" CvType="Text" DesignTimeRectangle="764, 261, 48, 20" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'En Son'" FullSelectorArgument="&lt;webctrl parentid='react-root' tag='SPAN' class='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3' idx='18' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='react-root' tag='SPAN' class='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3' type='' aaname='En Son' check:text='En Son' /&gt;" Guid="f0e573e2-af93-4f87-b2ae-6c573f220386" InformativeScreenshot="17ca5f7999dac3db7d850384cd12a6e5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CvTextArea="763, 263, 50, 14" CvTextArgument="En Son" CvType="Text" DesignTimeRectangle="764, 245, 48, 52" FriendlyName="'En Son'" FullSelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' class='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-majxgm r-1awozwy r-6koalj r-18u37iz r-1pi2tsx r-1777fci r-1l7z4oj r-95jzfe r-bnwqim' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' class='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-majxgm r-1awozwy r-6koalj r-18u37iz r-1pi2tsx r-1777fci r-1l7z4oj r-95jzfe r-bnwqim' type='' aaname='' check:text='En Son' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="Get All Tweets" sap:VirtualizedContainerService.HintSize="762,2830" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[isItAll = False]" DisplayName="Get All Tweets" sap:VirtualizedContainerService.HintSize="762,2830" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
               <ui:InterruptibleWhile.Body>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="728,2693" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -212,7 +210,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{accountName, getTweetDate.ToString, tweet.ToString}]" DataTable="[dt_tweets]" DisplayName="Add Tweet to DT" sap:VirtualizedContainerService.HintSize="334,189" sap2010:WorkflowViewState.IdRef="AddDataRow_6" />
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{accountName, currentDate.ToString, previousDate.ToString, getTweetDate.ToString, tweet.ToString}]" DataTable="[dt_tweets]" DisplayName="Add Tweet to DT" sap:VirtualizedContainerService.HintSize="334,189" sap2010:WorkflowViewState.IdRef="AddDataRow_6" />
                               <uix:NNavigateBrowser DisplayName="Go Back" sap:VirtualizedContainerService.HintSize="334,83" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_4" Version="V3" />
                             </Sequence>
                           </If.Then>
@@ -237,7 +235,7 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{accountName, getTweetDate.ToString, tweet.ToString}]" DataTable="[dt_tweets]" DisplayName="Add Tweet to DT" sap:VirtualizedContainerService.HintSize="334,189" sap2010:WorkflowViewState.IdRef="AddDataRow_7" />
+                                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{accountName, currentDate, previousDate, getTweetDate.ToString, tweet.ToString}]" DataTable="[dt_tweets]" DisplayName="Add Tweet to DT" sap:VirtualizedContainerService.HintSize="334,189" sap2010:WorkflowViewState.IdRef="AddDataRow_7" />
                                     <uix:NNavigateBrowser DisplayName="Go Back" sap:VirtualizedContainerService.HintSize="334,83" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_5" Version="V3" />
                                   </Sequence>
                                 </If.Then>
@@ -276,7 +274,7 @@
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                           </ActivityAction.Argument>
-                          <Assign DisplayName="There is no tweet to scrape" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_7">
+                          <Assign DisplayName="There is no tweet to scrape" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Boolean">[isItAll]</OutArgument>
                             </Assign.To>
@@ -290,9 +288,6 @@
                   </TryCatch>
                 </Sequence>
               </ui:InterruptibleWhile.Body>
-              <ui:InterruptibleWhile.Condition>
-                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="isItAll = False" />
-              </ui:InterruptibleWhile.Condition>
             </ui:InterruptibleWhile>
           </Sequence>
         </ActivityAction>
@@ -308,6 +303,6 @@
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
     <ui:OutputDataTable DataTable="[dt_tweets]" DisplayName="Convert DT to String" sap:VirtualizedContainerService.HintSize="858,81" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[dt_Out]" />
-    <ui:LogMessage DisplayName="Log DT" sap:VirtualizedContainerService.HintSize="858,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[dt_Out]" />
+    <ui:LogMessage DisplayName="Log DT" sap:VirtualizedContainerService.HintSize="858,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[dt_tweets]" />
   </Sequence>
 </Activity>
