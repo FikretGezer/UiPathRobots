@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "accountNames&Sequence_1",
         "searchInput&Sequence_1",
         "accountName&Sequence_1",
         "currentDate&Sequence_1",
@@ -23,16 +24,17 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "GetDatesAndAccName.xaml",
+      "Path": "GetAccNames.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "countOfAccounts&Sequence_1",
+        "currentIndex&Sequence_1",
+        "currentAccountName&Sequence_1",
         "numberOfDaysInt&Sequence_1",
         "numberOfDays&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "accountName",
-        "previousDate",
-        "currentDate"
+        "accountNames"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -41,6 +43,10 @@
       "Path": "SearchAndGetTweets.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "getViewCount&Sequence_1",
+        "getCommentCount&Sequence_1",
+        "getLikeCount&Sequence_1",
+        "getRetweetCount&Sequence_1",
         "dt_Out&Sequence_1",
         "curRowIdx&Sequence_1",
         "isItAll&Sequence_1",
@@ -66,6 +72,22 @@
       "ArgumentsSectionElementsOrder": [
         "dt_Out",
         "accountName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GetDates.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "untilDate&Sequence_5",
+        "deneme&Sequence_1",
+        "isDateValid&Sequence_1",
+        "untilDate&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "previousDate",
+        "startDate"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
