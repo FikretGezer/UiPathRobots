@@ -352,6 +352,7 @@ Gets three inputs. First input for the place to go, other two for start date and
 
 ## Robot 15: Getting Tweets Between Two Dates <a name="robot-15"></a>
 ### What This Robot Does?
+Scrapes tweets using the informations given by users and write the data it gets in an Excel file.
 ### Screenshots
 <div>
   <div align="center">    
