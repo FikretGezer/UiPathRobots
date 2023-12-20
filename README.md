@@ -378,7 +378,7 @@ Scrapes tweets using the informations given by users and write the data it gets 
 
 ## Robot 16: Get Twitter Mentions Between Two Dates <a name="robot-16"></a>
 ### What This Robot Does?
-Scrapes twitter mentions about an account that given by users and write the data it gets in an Excel file.
+Scrapes the data of the twitter mentions about an account that given by users and write the data it gets in an Excel file.
 ### Screenshots
 <div>
   <div align="center">    
