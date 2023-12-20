@@ -121,20 +121,14 @@
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Warning" sap:VirtualizedContainerService.HintSize="510,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Before you continue, &quot; + Environment.NewLine +&#xA;&quot;Please make sure you login any  account.&quot;]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Account Names" sap:VirtualizedContainerService.HintSize="510,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="GetAccNames.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="accountNames">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="accountNames" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="accountNames">[accountNames]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:LogMessage DisplayName="Log Names" sap:VirtualizedContainerService.HintSize="510,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[accountNames]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Dates" sap:VirtualizedContainerService.HintSize="510,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="GetDates.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="startDate">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="currentDate" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="previousDate">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="previousDate" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="startDate">[currentDate]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="previousDate">[previousDate]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:LogMessage DisplayName="Log Dates" sap:VirtualizedContainerService.HintSize="510,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[currentDate+&quot;, &quot;+previousDate]" />
@@ -194,12 +188,8 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Write Data In An Excel File" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="WriteDataInAnExcelFile.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="accountName">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="accountName" />
-                </InArgument>
-                <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_Out">
-                  <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_OutTweets" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="accountName">[accountName]</InArgument>
+                <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_Out">[dt_OutTweets]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
