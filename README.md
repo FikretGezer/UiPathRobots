@@ -14,6 +14,7 @@
 ### • [Robot 13: Calendar Picker](#robot-13)
 ### • [Robot 14: Creating Random CVs](#robot-14)
 ### • [Robot 15: Getting Tweets Between Two Dates](#robot-15)
+### • [Robot 16: Get Twitter Mentions Between Two Dates](#robot-16)
 
 ## Robot 1: Clothing Consultant <a name="robot-1"></a>
 ### What This Robot Does?
@@ -372,5 +373,25 @@ Scrapes tweets using the informations given by users and write the data it gets 
 <div>
   <div align="center">    
     <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/31ef2e02-8c55-4f6d-a653-e7e14461578d" alt="" />
+  </div>
+</div>
+
+## Robot 16: Get Twitter Mentions Between Two Dates <a name="robot-16"></a>
+### What This Robot Does?
+Scrapes twitter mentions about an account that given by users and write the data it gets in an Excel file.
+### Screenshots
+<div>
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/6b25a4bd-c94b-4800-adbb-aa22792c5755" alt="" />
+  </div>
+</div>
+<div>
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/6b25a4bd-c94b-4800-adbb-aa22792c5755" alt="" />
+  </div>
+</div>
+<div>
+  <div align="center">    
+    <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/7a63782f-bef6-4d22-82ec-53663737c748" alt="" />
   </div>
 </div>
