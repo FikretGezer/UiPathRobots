@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "searchOption&Sequence_2",
         "dt_Mentions&Sequence_2",
         "searchInput&Sequence_2",
         "accountName&Sequence_2",
@@ -43,6 +44,9 @@
       "Path": "SearchAndGetMentions.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "mentionLike&Sequence_25",
+        "mentionRetweet&Sequence_25",
+        "mentionComments&Sequence_25",
         "isItOver&Sequence_1",
         "index&Sequence_1",
         "mentionURL&Sequence_1",
