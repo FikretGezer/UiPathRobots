@@ -102,6 +102,31 @@
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "SearchAndGetMentions-SecondVersion.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "mention&Sequence_1",
+        "mentionDate&Sequence_1",
+        "mentionView&Sequence_1",
+        "mentionURL&Sequence_1",
+        "index&Sequence_1",
+        "isItOver&Sequence_1",
+        "mentionComments&Sequence_25",
+        "mentionRetweet&Sequence_25",
+        "mentionLike&Sequence_25",
+        "extractedCounts&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "searchInput",
+        "accountName",
+        "currentDate",
+        "previousDate",
+        "dt_mentions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }

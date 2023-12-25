@@ -1,0 +1,799 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SearchAndGetTweets" this:SearchAndGetTweets.searchInput="(from:gusholderhaber) until:2023-12-17 since:2023-12-15 -filter:replies" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="searchInput" Type="InArgument(x:String)" />
+    <x:Property Name="accountName" Type="InArgument(x:String)" />
+    <x:Property Name="currentDate" Type="InArgument(x:String)" />
+    <x:Property Name="previousDate" Type="InArgument(x:String)" />
+    <x:Property Name="dt_mentions" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1045,4503</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SearchAndGetTweets_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Twitter.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.Twitter.IntegrationService.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SearchAndGetTweets" sap:VirtualizedContainerService.HintSize="820,4438" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="mention" />
+      <Variable x:TypeArguments="x:String" Name="mentionDate" />
+      <Variable x:TypeArguments="x:String" Name="mentionView" />
+      <Variable x:TypeArguments="x:String" Name="mentionURL" />
+      <Variable x:TypeArguments="x:Int32" Name="index" />
+      <Variable x:TypeArguments="x:Boolean" Name="isItOver" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[dt_mentions]" DisplayName="Create DT for Mentions" sap:VirtualizedContainerService.HintSize="758,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Account_x0020_Tag&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Current_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Previous_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_View_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_Comment_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_Retweet_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_Like_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;URL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <Assign DisplayName="Declare isItOver" sap:VirtualizedContainerService.HintSize="758,82" sap2010:WorkflowViewState.IdRef="Assign_17">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Boolean">[isItOver]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Open Twitter" sap:VirtualizedContainerService.HintSize="758,4105" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="8a558b23-2078-42c6-91c8-43db0595037d" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Getting The Mentions" sap:VirtualizedContainerService.HintSize="724,3888" sap2010:WorkflowViewState.IdRef="Sequence_20">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type The Search Input" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="662,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Text="[searchInput]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://twitter.com/home" CvElementArea="1230, 183, 354, 48" CvType="InputBox" DesignTimeRectangle="1277, 187, 304, 42" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='r-30o5oe r-1dz5y72 r-1niwhzg r-17gur6a r-1yadl64 r-deolkf r-homxoj r-poiln3 r-7cikom r-1ny4l3l r-xyw6el r-13qz1uu r-fdjqy7' aaname='' /&gt;" Guid="5250df85-35a4-4dac-b4ba-8a45e7d67203" InformativeScreenshot="80b4a72aba69aa342b20c3d92a7a2e6b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="3" DisplayName="Press Enter To Search" sap:VirtualizedContainerService.HintSize="662,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_16" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V3" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DisplayName="Select Latest Mentions" sap:VirtualizedContainerService.HintSize="662,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://twitter.com/search?q=(%40playstation)%20until%3A2023-12-20%20since%3A2023-12-19&amp;src=recent_search_click" CvTextArea="749, 253, 46, 14" CvTextArgument="Latest" CvType="Text" DesignTimeRectangle="750, 235, 44, 52" DesignTimeScaleFactor="1" FriendlyName="'Latest'" FullSelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' class='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-majxgm r-1awozwy r-6koalj r-18u37iz r-1pi2tsx r-1777fci r-1l7z4oj r-95jzfe r-bnwqim' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' class='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-majxgm r-1awozwy r-6koalj r-18u37iz r-1pi2tsx r-1777fci r-1l7z4oj r-95jzfe r-bnwqim' type='' aaname='' check:text='Latest' /&gt;" Guid="38f43f06-46d0-4cae-b66d-816ddbca8c51" InformativeScreenshot="ce7fe2210656b4da3265ed5ff6d0ea7e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="Get Mentions Until It's Over" sap:VirtualizedContainerService.HintSize="662,3099" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+              <ui:InterruptibleWhile.Body>
+                <Sequence sap:VirtualizedContainerService.HintSize="628,2963" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="mentionComments" />
+                    <Variable x:TypeArguments="x:String" Name="mentionRetweet" />
+                    <Variable x:TypeArguments="x:String" Name="mentionLike" />
+                    <Variable x:TypeArguments="sd:DataTable" Name="extractedCounts" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="2" DelayBefore="2" DisplayName="Press J To Select The Mention" sap:VirtualizedContainerService.HintSize="586,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_14" Shortcuts="[d(hk)]j[u(hk)]" Version="V3" />
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Press Enter To See The Full Mention" sap:VirtualizedContainerService.HintSize="586,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_15" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V3" />
+                  <TryCatch DisplayName="Check is it a picture" sap:VirtualizedContainerService.HintSize="586,52" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <TryCatch.Try>
+                      <uix:NGetText DisplayName="Get Mention" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NGetText_31" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" TextString="[mention]" Version="V3">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable BrowserURL="https://twitter.com/TheuneTyler/status/1737261179074969698" DesignTimeRectangle="619, 300, 566, 24" DesignTimeScaleFactor="1" FriendlyName="'Shockingly I’ve'" FullSelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' class='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-1inkyih r-16dba41 r-bnwqim r-135wba7' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' class='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-1inkyih r-16dba41 r-bnwqim r-135wba7' type='' aaname='' /&gt;" Guid="64838152-5a68-426d-ab22-a485c683128a" ImageBase64="" InformativeScreenshot="6fa5d821822f2da0af74616f4fdf628d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="603, 234, 598, 190" FriendlyName="'Tyler Theune@TheuneTyle…'" FullSelectorArgument="&lt;webctrl tag='ARTICLE' class='css-175oi2r r-18u37iz r-1udh08x r-i023vh r-1qhn6m8 r-1ny4l3l' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='ARTICLE' class='css-175oi2r r-18u37iz r-1udh08x r-i023vh r-1qhn6m8 r-1ny4l3l' type='' aaname='' check:text='Tyler Theune@TheuneTylerShockingly I’ve owned a ps4 since launch and never got GTA. I know I’m the' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                      </uix:NGetText>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,510" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <Sequence sap:VirtualizedContainerService.HintSize="450,441" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Error" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[exception.Message]" />
+                            <uix:NNavigateBrowser DisplayName="Go Back" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_8" Version="V3" />
+                            <ui:Continue sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="Continue_3" />
+                          </Sequence>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
+                  <uix:NGetText DisplayName="Get Date" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NGetText_32" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" TextString="[mentionDate]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://twitter.com/BropubG007/status/1737259708560601592" CvTextArea="617, 342, 163, 14" CvType="AnyWordGroup" DesignTimeRectangle="619, 340, 161, 20" DesignTimeScaleFactor="1" FriendlyName="'2:52 AM · Dec 20, 2023'" FullSelectorArgument="&lt;webctrl parentid='react-root' tag='TIME' parentclass='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='react-root' tag='TIME' parentclass='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21' type='' class='' /&gt;" Guid="03aacf0b-bc30-4777-b644-504d7e7cc32b" ImageBase64="" InformativeScreenshot="0f19683317af129c98ed2e2aacb2fcf0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="603, 234, 598, 190" FriendlyName="'Eng Sam@BropubG007Good'" FullSelectorArgument="&lt;webctrl tag='ARTICLE' class='css-175oi2r r-18u37iz r-1udh08x r-i023vh r-1qhn6m8 r-1ny4l3l' parentid='react-root' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='ARTICLE' class='css-175oi2r r-18u37iz r-1udh08x r-i023vh r-1qhn6m8 r-1ny4l3l' parentid='react-root' type='' aaname='' check:text='Eng Sam@BropubG007Good bro2:52 AM · Dec 20, 2023·1 View1' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                  <uix:NGetText DisplayName="Get View Count" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NGetText_33" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" TextString="[mentionView]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://twitter.com/BropubG007/status/1737259708560601592" CvTextArea="790, 342, 44, 14" CvType="AnyWordGroup" DesignTimeRectangle="792, 465, 65, 18" DesignTimeScaleFactor="1" FriendlyName="'107 Views'" FullSelectorArgument="&lt;webctrl parentid='react-root' tag='SPAN' class='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3' parentclass='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='react-root' tag='SPAN' class='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3' parentclass='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41' type='' aaname=' ' /&gt;" Guid="650dab41-a2ed-4e59-8756-9dd7c53f2cc6" ImageBase64="" InformativeScreenshot="bdef1de5646e08dfe33cd04049b37aaa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[extractedCounts]" DisplayName="Extract Comments, Retweets and Likes Count" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='counts'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Timeout="5" Version="V3">
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="619, 376, 566, 48" DesignTimeScaleFactor="1" FriendlyName="'11'" FullSelectorArgument="&lt;webctrl tag='DIV' class='css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-s1qlax r-2sztyj r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep r-1igl3o0 r-rull8r r-qklmqi' parentclass='css-175oi2r' parentid='react-root' /&gt;" Guid="56ba0dd6-f64c-44a4-b34e-91789e94e343" InformativeScreenshot="34047f90b3bf9276524e3809c81f7e3f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NExtractData.Target>
+                  </uix:NExtractData>
+                  <TryCatch DisplayName="Try Scraping Comments, Retweets and Likes Count" sap:VirtualizedContainerService.HintSize="586,52" sap2010:WorkflowViewState.IdRef="TryCatch_21">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <TryCatch.Try>
+                      <Sequence DisplayName="Assign variables for easy access" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign DisplayName="Assign Comments" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_48">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[mentionComments]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[extractedCounts.Rows(0).Item("counts").ToString]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign DisplayName="Assign Retweets" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_47">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[mentionRetweet]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[extractedCounts.Rows(1).Item("counts").ToString]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign DisplayName="Assign Likes" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_49">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[mentionLike]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[extractedCounts.Rows(2).Item("counts").ToString]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="496,648" sap2010:WorkflowViewState.IdRef="Catch`1_23">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <TryCatch DisplayName="Try Scraping Comments, Retweets and Likes Count_Second" sap:VirtualizedContainerService.HintSize="490,579" sap2010:WorkflowViewState.IdRef="TryCatch_25">
+                            <TryCatch.Try>
+                              <Sequence sap:VirtualizedContainerService.HintSize="512,389" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[extractedCounts]" DisplayName="Extract Comments, Retweets and Likes Count_Second" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='counts' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="450,157" sap2010:WorkflowViewState.IdRef="NExtractData_10" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Timeout="5" Version="V3">
+                                  <uix:NExtractData.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="619, 468, 566, 48" DesignTimeScaleFactor="1" FriendlyName="'11'" FullSelectorArgument="&lt;webctrl aria-role='group' tag='DIV' class='css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-s1qlax r-2sztyj r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep' parentclass='css-175oi2r' parentid='react-root' /&gt;" Guid="1c91cff2-fd71-4502-9e9a-cbe6b8a441ad" InformativeScreenshot="57c96ce5ad22757850cded3db8616834.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                  </uix:NExtractData.Target>
+                                </uix:NExtractData>
+                                <Sequence DisplayName="Assign variables for easy access_Second" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                                    <ui:CommentOut.Body>
+                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,163" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <TryCatch DisplayName="Try Assigning Comments" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="TryCatch_22">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <TryCatch.Try>
+                                            <Assign DisplayName="Assign Comments" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_50">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[mentionComments]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[extractedCounts.Rows(0).Item("counts").ToString]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </TryCatch.Try>
+                                          <TryCatch.Catches>
+                                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,21" sap2010:WorkflowViewState.IdRef="Catch`1_20">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ActivityAction x:TypeArguments="s:Exception">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                </ActivityAction.Argument>
+                                                <Assign DisplayName="Assign Comments" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_51">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:String">[mentionComments]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:String">0</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                              </ActivityAction>
+                                            </Catch>
+                                          </TryCatch.Catches>
+                                        </TryCatch>
+                                      </Sequence>
+                                    </ui:CommentOut.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:CommentOut>
+                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                                    <ui:CommentOut.Body>
+                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,163" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <TryCatch DisplayName="Try Assigning Retweets" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="TryCatch_23">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <TryCatch.Try>
+                                            <Assign DisplayName="Assign Retweets" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_52">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[mentionRetweet]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[extractedCounts.Rows(1).Item("counts").ToString]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </TryCatch.Try>
+                                          <TryCatch.Catches>
+                                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,21" sap2010:WorkflowViewState.IdRef="Catch`1_21">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ActivityAction x:TypeArguments="s:Exception">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                </ActivityAction.Argument>
+                                                <Assign DisplayName="Assign Retweets" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_53">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:String">[mentionRetweet]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:String">0</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                              </ActivityAction>
+                                            </Catch>
+                                          </TryCatch.Catches>
+                                        </TryCatch>
+                                      </Sequence>
+                                    </ui:CommentOut.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:CommentOut>
+                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                                    <ui:CommentOut.Body>
+                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,163" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <TryCatch DisplayName="Try Assigning Likes" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="TryCatch_24">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <TryCatch.Try>
+                                            <Assign DisplayName="Assign Likes" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_54">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[mentionLike]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[extractedCounts.Rows(2).Item("counts").ToString]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </TryCatch.Try>
+                                          <TryCatch.Catches>
+                                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,21" sap2010:WorkflowViewState.IdRef="Catch`1_22">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ActivityAction x:TypeArguments="s:Exception">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                </ActivityAction.Argument>
+                                                <Assign DisplayName="Assign Likes" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_55">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:String">[mentionLike]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:String">0</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                              </ActivityAction>
+                                            </Catch>
+                                          </TryCatch.Catches>
+                                        </TryCatch>
+                                      </Sequence>
+                                    </ui:CommentOut.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:CommentOut>
+                                  <Assign DisplayName="Assign Comments" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_56">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[mentionComments]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[extractedCounts.Rows(0).Item("counts").ToString]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign DisplayName="Assign Retweets" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_57">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[mentionRetweet]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[extractedCounts.Rows(1).Item("counts").ToString]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign DisplayName="Assign Likes" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_58">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[mentionLike]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[extractedCounts.Rows(2).Item("counts").ToString]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </Sequence>
+                            </TryCatch.Try>
+                            <TryCatch.Catches>
+                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,416" sap2010:WorkflowViewState.IdRef="Catch`1_27">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ActivityAction x:TypeArguments="s:Exception">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Assign defaul values to variables for easy access" sap:VirtualizedContainerService.HintSize="450,347" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <TryCatch DisplayName="Try Assigning Comments" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="TryCatch_26">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <TryCatch.Try>
+                                        <Assign DisplayName="Assign Comments" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_59">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[mentionComments]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[extractedCounts.Rows(0).Item("counts").ToString]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </TryCatch.Try>
+                                      <TryCatch.Catches>
+                                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,21" sap2010:WorkflowViewState.IdRef="Catch`1_24">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ActivityAction x:TypeArguments="s:Exception">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                            </ActivityAction.Argument>
+                                            <Assign DisplayName="Assign Comments" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_60">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[mentionComments]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">0</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </ActivityAction>
+                                        </Catch>
+                                      </TryCatch.Catches>
+                                    </TryCatch>
+                                    <TryCatch DisplayName="Try Assigning Retweets" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="TryCatch_27">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <TryCatch.Try>
+                                        <Assign DisplayName="Assign Retweets" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_61">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[mentionRetweet]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[extractedCounts.Rows(1).Item("counts").ToString]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </TryCatch.Try>
+                                      <TryCatch.Catches>
+                                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,21" sap2010:WorkflowViewState.IdRef="Catch`1_25">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ActivityAction x:TypeArguments="s:Exception">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                            </ActivityAction.Argument>
+                                            <Assign DisplayName="Assign Retweets" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_62">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[mentionRetweet]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">0</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </ActivityAction>
+                                        </Catch>
+                                      </TryCatch.Catches>
+                                    </TryCatch>
+                                    <TryCatch DisplayName="Try Assigning Likes" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="TryCatch_28">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <TryCatch.Try>
+                                        <Assign DisplayName="Assign Likes" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_63">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[mentionLike]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[extractedCounts.Rows(2).Item("counts").ToString]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </TryCatch.Try>
+                                      <TryCatch.Catches>
+                                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,21" sap2010:WorkflowViewState.IdRef="Catch`1_26">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ActivityAction x:TypeArguments="s:Exception">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                            </ActivityAction.Argument>
+                                            <Assign DisplayName="Assign Likes" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_64">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[mentionLike]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">0</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                          </ActivityAction>
+                                        </Catch>
+                                      </TryCatch.Catches>
+                                    </TryCatch>
+                                  </Sequence>
+                                </ActivityAction>
+                              </Catch>
+                            </TryCatch.Catches>
+                          </TryCatch>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
+                  <Sequence DisplayName="Checking are values null or not" sap:VirtualizedContainerService.HintSize="586,81" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Check Number Val Is Null" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="CheckNumberValIsNull.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InOutArgument x:TypeArguments="x:String" x:Key="numberVal">[mentionView]</InOutArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Check Number Val Is Null" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="CheckNumberValIsNull.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InOutArgument x:TypeArguments="x:String" x:Key="numberVal">[mentionComments]</InOutArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Check Number Val Is Null" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="CheckNumberValIsNull.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InOutArgument x:TypeArguments="x:String" x:Key="numberVal">[mentionRetweet]</InOutArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Check Number Val Is Null" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="CheckNumberValIsNull.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InOutArgument x:TypeArguments="x:String" x:Key="numberVal">[mentionLike]</InOutArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
+                  <uix:NGetUrl CurrentUrl="[mentionURL]" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="586,87" sap2010:WorkflowViewState.IdRef="NGetUrl_3" Version="V3" />
+                  <If Condition="[dt_mentions.Rows.Count &lt;= 0]" DisplayName="Check is it first tweet" sap:VirtualizedContainerService.HintSize="586,1414" sap2010:WorkflowViewState.IdRef="If_14">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,396" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{mentionURL.Split(&quot;twitter.com/&quot;)(1).Split(&quot;/&quot;)(0), currentDate, previousDate, mentionDate, mentionView, mentionComments, mentionRetweet, mentionLike, mention, mentionURL}]" DataTable="[dt_mentions]" DisplayName="Add Tweet to DT" sap:VirtualizedContainerService.HintSize="334,186" sap2010:WorkflowViewState.IdRef="AddDataRow_14" />
+                        <uix:NNavigateBrowser DisplayName="Go Back" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_9" Version="V3" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="552,836" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If Condition="[mentionURL &lt;&gt; dt_mentions.Rows(dt_mentions.Rows.Count - 1).Item(&quot;URL&quot;).ToString]" sap:VirtualizedContainerService.HintSize="510,748" sap2010:WorkflowViewState.IdRef="If_13">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="376,396" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{mentionURL.Split(&quot;twitter.com/&quot;)(1).Split(&quot;/&quot;)(0), currentDate, previousDate, mentionDate, mentionView, mentionComments, mentionRetweet, mentionLike, mention, mentionURL}]" DataTable="[dt_mentions]" DisplayName="Add Tweet to DT" sap:VirtualizedContainerService.HintSize="334,186" sap2010:WorkflowViewState.IdRef="AddDataRow_12" />
+                              <uix:NNavigateBrowser DisplayName="Go Back" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_11" Version="V3" />
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign DisplayName="All Tweets are Scraped" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_22">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[isItOver]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="isItOver = False" />
+              </ui:InterruptibleWhile.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InterruptibleWhile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1912, -8, 1936, 1096" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHMSURBVFhHxZaBkcIgEEUtwRIsISVYgh1oB7ED7UA7MB1YgiVYgiVYAudn7jMLfEhw5jhm3tzlhQDZZTGrT3P/jJQ9kbInUvYkFvf73ZXabreL+i7h+XzOPRuL9XrtXq+Xe7/f7nw+B3ANNptN1L/G5XLxk+N5df+XXG63W//g8XgM7nA4ePd4PKK+JU6nk+8/MzmQ0l2vVz/AMAzBTdPknV2YYhxH3w/pVPcTpAypAPjfuloqsGA0+9wMUnqYCuQydSoVWBQX3bBXpAwwFZg4dTYVnLx1o36QMoAwopRsSOk4Ga/R7EIXImUE82o3FRwWgIlvt5u/P7c5C0iZgcHTSejQFpRbCSkl2HhpjuHQvgg9kVKCibEAWwF0DWWXImWRWipsuTYgZRG+MZo9Jfkj9idVQGy5pWHHX1x/kQopJXxLhFyFnadkYyqkzFC/birsPCUbvh2kjODkGNx6FXY6pGhhKqQM4E3QkHt1n2HHaUjHk3Pht4OUHlvj9vBJYdj3+31wqlwLSOknZHhrkwMbdttXnZyCXHJANFvrNZgKdUrOpCKXttzU/RJMBfYDqgXw3KiMFYuGj8kMG7m0VVKRid5I2RMpeyJlJ1buB0zto6D+OsKYAAAAAElFTkSuQmCC" InformativeScreenshot="cd69e2c1c40a53a8a7e44b8811971285.jpg" Selector="&lt;html app='chrome.exe' title='Home / X' /&gt;" Title="Anasayfa / X" Url="https://twitter.com/home" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
