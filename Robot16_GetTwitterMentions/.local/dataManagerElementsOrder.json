@@ -12,13 +12,13 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "searchOption&Sequence_2",
-        "dt_Mentions&Sequence_2",
-        "searchInput&Sequence_2",
-        "accountName&Sequence_2",
-        "currentDate&Sequence_2",
-        "previousDate&Sequence_2",
-        "accountNames&Sequence_2"
+        "searchInput&Sequence_8",
+        "accountName&Sequence_8",
+        "currentDate&Sequence_8",
+        "previousDate&Sequence_8",
+        "dt_Mentions&Sequence_8",
+        "accountNames&Sequence_8",
+        "searchOption&Sequence_8"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],

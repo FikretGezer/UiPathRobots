@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1045,4503</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1045,3141</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SearchAndGetTweets_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -129,7 +129,7 @@
       <AssemblyReference>UiPath.Twitter.IntegrationService.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SearchAndGetTweets" sap:VirtualizedContainerService.HintSize="820,4438" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SearchAndGetTweets" sap:VirtualizedContainerService.HintSize="684,3076" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="mention" />
       <Variable x:TypeArguments="x:String" Name="mentionDate" />
@@ -143,8 +143,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DataTable="[dt_mentions]" DisplayName="Create DT for Mentions" sap:VirtualizedContainerService.HintSize="758,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Account_x0020_Tag&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Current_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Previous_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_View_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_Comment_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_Retweet_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_Like_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;URL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <Assign DisplayName="Declare isItOver" sap:VirtualizedContainerService.HintSize="758,82" sap2010:WorkflowViewState.IdRef="Assign_17">
+    <ui:BuildDataTable DataTable="[dt_mentions]" DisplayName="Create DT for Mentions" sap:VirtualizedContainerService.HintSize="622,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Account_x0020_Tag&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Current_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Previous_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_View_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_Comment_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_Retweet_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention_x0020_Like_x0020_Count&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Mention&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;URL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <Assign DisplayName="Declare isItOver" sap:VirtualizedContainerService.HintSize="622,82" sap2010:WorkflowViewState.IdRef="Assign_17">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">[isItOver]</OutArgument>
       </Assign.To>
@@ -152,32 +152,32 @@
         <InArgument x:TypeArguments="x:Boolean">False</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Open Twitter" sap:VirtualizedContainerService.HintSize="758,4105" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="8a558b23-2078-42c6-91c8-43db0595037d" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Open Twitter" sap:VirtualizedContainerService.HintSize="622,2743" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="8a558b23-2078-42c6-91c8-43db0595037d" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Getting The Mentions" sap:VirtualizedContainerService.HintSize="724,3888" sap2010:WorkflowViewState.IdRef="Sequence_20">
+          <Sequence DisplayName="Getting The Mentions" sap:VirtualizedContainerService.HintSize="588,2526" sap2010:WorkflowViewState.IdRef="Sequence_20">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type The Search Input" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="662,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Text="[searchInput]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type The Search Input" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="526,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Text="[searchInput]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://twitter.com/home" CvElementArea="1230, 183, 354, 48" CvType="InputBox" DesignTimeRectangle="1277, 187, 304, 42" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='r-30o5oe r-1dz5y72 r-1niwhzg r-17gur6a r-1yadl64 r-deolkf r-homxoj r-poiln3 r-7cikom r-1ny4l3l r-xyw6el r-13qz1uu r-fdjqy7' aaname='' /&gt;" Guid="5250df85-35a4-4dac-b4ba-8a45e7d67203" InformativeScreenshot="80b4a72aba69aa342b20c3d92a7a2e6b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="3" DisplayName="Press Enter To Search" sap:VirtualizedContainerService.HintSize="662,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_16" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V3" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DisplayName="Select Latest Mentions" sap:VirtualizedContainerService.HintSize="662,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Version="V3">
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="3" DisplayName="Press Enter To Search" sap:VirtualizedContainerService.HintSize="526,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_16" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V3" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DisplayName="Select Latest Mentions" sap:VirtualizedContainerService.HintSize="526,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://twitter.com/search?q=(%40playstation)%20until%3A2023-12-20%20since%3A2023-12-19&amp;src=recent_search_click" CvTextArea="749, 253, 46, 14" CvTextArgument="Latest" CvType="Text" DesignTimeRectangle="750, 235, 44, 52" DesignTimeScaleFactor="1" FriendlyName="'Latest'" FullSelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' class='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-majxgm r-1awozwy r-6koalj r-18u37iz r-1pi2tsx r-1777fci r-1l7z4oj r-95jzfe r-bnwqim' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' class='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-majxgm r-1awozwy r-6koalj r-18u37iz r-1pi2tsx r-1777fci r-1l7z4oj r-95jzfe r-bnwqim' type='' aaname='' check:text='Latest' /&gt;" Guid="38f43f06-46d0-4cae-b66d-816ddbca8c51" InformativeScreenshot="ce7fe2210656b4da3265ed5ff6d0ea7e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="Get Mentions Until It's Over" sap:VirtualizedContainerService.HintSize="662,3099" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="Get Mentions Until It's Over" sap:VirtualizedContainerService.HintSize="526,1737" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
               <ui:InterruptibleWhile.Body>
-                <Sequence sap:VirtualizedContainerService.HintSize="628,2963" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                <Sequence sap:VirtualizedContainerService.HintSize="492,1601" sap2010:WorkflowViewState.IdRef="Sequence_25">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="mentionComments" />
                     <Variable x:TypeArguments="x:String" Name="mentionRetweet" />
@@ -189,9 +189,9 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="2" DelayBefore="2" DisplayName="Press J To Select The Mention" sap:VirtualizedContainerService.HintSize="586,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_14" Shortcuts="[d(hk)]j[u(hk)]" Version="V3" />
-                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Press Enter To See The Full Mention" sap:VirtualizedContainerService.HintSize="586,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_15" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V3" />
-                  <TryCatch DisplayName="Check is it a picture" sap:VirtualizedContainerService.HintSize="586,52" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="2" DelayBefore="2" DisplayName="Press J To Select The Mention" sap:VirtualizedContainerService.HintSize="450,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_14" Shortcuts="[d(hk)]j[u(hk)]" Version="V3" />
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Press Enter To See The Full Mention" sap:VirtualizedContainerService.HintSize="450,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_15" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V3" />
+                  <TryCatch DisplayName="Check is it a picture" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -237,7 +237,7 @@
                       </Catch>
                     </TryCatch.Catches>
                   </TryCatch>
-                  <uix:NGetText DisplayName="Get Date" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NGetText_32" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" TextString="[mentionDate]" Version="V3">
+                  <uix:NGetText DisplayName="Get Date" sap:VirtualizedContainerService.HintSize="450,157" sap2010:WorkflowViewState.IdRef="NGetText_32" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" TextString="[mentionDate]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://twitter.com/BropubG007/status/1737259708560601592" CvTextArea="617, 342, 163, 14" CvType="AnyWordGroup" DesignTimeRectangle="619, 340, 161, 20" DesignTimeScaleFactor="1" FriendlyName="'2:52 AM · Dec 20, 2023'" FullSelectorArgument="&lt;webctrl parentid='react-root' tag='TIME' parentclass='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='react-root' tag='TIME' parentclass='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3 r-xoduu5 r-1q142lx r-1w6e6rj r-9aw3ui r-3s2u2q r-1loqt21' type='' class='' /&gt;" Guid="03aacf0b-bc30-4777-b644-504d7e7cc32b" ImageBase64="" InformativeScreenshot="0f19683317af129c98ed2e2aacb2fcf0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -248,17 +248,17 @@
                       </uix:TargetAnchorable>
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <uix:NGetText DisplayName="Get View Count" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NGetText_33" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" TextString="[mentionView]" Version="V3">
+                  <uix:NGetText DisplayName="Get View Count" sap:VirtualizedContainerService.HintSize="450,157" sap2010:WorkflowViewState.IdRef="NGetText_33" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" TextString="[mentionView]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://twitter.com/BropubG007/status/1737259708560601592" CvTextArea="790, 342, 44, 14" CvType="AnyWordGroup" DesignTimeRectangle="792, 465, 65, 18" DesignTimeScaleFactor="1" FriendlyName="'107 Views'" FullSelectorArgument="&lt;webctrl parentid='react-root' tag='SPAN' class='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3' parentclass='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='react-root' tag='SPAN' class='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3' parentclass='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41' type='' aaname=' ' /&gt;" Guid="650dab41-a2ed-4e59-8756-9dd7c53f2cc6" ImageBase64="" InformativeScreenshot="bdef1de5646e08dfe33cd04049b37aaa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[extractedCounts]" DisplayName="Extract Comments, Retweets and Likes Count" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='counts'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="586,157" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Timeout="5" Version="V3">
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[extractedCounts]" DisplayName="Extract Comments, Retweets and Likes Count" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='counts'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="450,157" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Timeout="5" Version="V3">
                     <uix:NExtractData.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="619, 376, 566, 48" DesignTimeScaleFactor="1" FriendlyName="'11'" FullSelectorArgument="&lt;webctrl tag='DIV' class='css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-s1qlax r-2sztyj r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep r-1igl3o0 r-rull8r r-qklmqi' parentclass='css-175oi2r' parentid='react-root' /&gt;" Guid="56ba0dd6-f64c-44a4-b34e-91789e94e343" InformativeScreenshot="34047f90b3bf9276524e3809c81f7e3f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
                     </uix:NExtractData.Target>
                   </uix:NExtractData>
-                  <TryCatch DisplayName="Try Scraping Comments, Retweets and Likes Count" sap:VirtualizedContainerService.HintSize="586,52" sap2010:WorkflowViewState.IdRef="TryCatch_21">
+                  <TryCatch DisplayName="Try Scraping Comments, Retweets and Likes Count" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="TryCatch_21">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -683,7 +683,7 @@
                       </Catch>
                     </TryCatch.Catches>
                   </TryCatch>
-                  <Sequence DisplayName="Checking are values null or not" sap:VirtualizedContainerService.HintSize="586,81" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                  <Sequence DisplayName="Checking are values null or not" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_55">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -711,11 +711,11 @@
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
-                  <uix:NGetUrl CurrentUrl="[mentionURL]" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="586,87" sap2010:WorkflowViewState.IdRef="NGetUrl_3" Version="V3" />
-                  <If Condition="[dt_mentions.Rows.Count &lt;= 0]" DisplayName="Check is it first tweet" sap:VirtualizedContainerService.HintSize="586,1414" sap2010:WorkflowViewState.IdRef="If_14">
+                  <uix:NGetUrl CurrentUrl="[mentionURL]" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="450,87" sap2010:WorkflowViewState.IdRef="NGetUrl_3" Version="V3" />
+                  <If Condition="[dt_mentions.Rows.Count &lt;= 0]" DisplayName="Check is it first tweet" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="If_14">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
