@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SearchAndGetTweets" this:SearchAndGetTweets.searchInput="(from:gusholderhaber) until:2023-12-17 since:2023-12-15 -filter:replies" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SearchAndGetTweets" this:SearchAndGetTweets.searchInput="(from:turkuvaz) until:2023-12-28 since:2023-12-25 -filter:replies" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="searchInput" Type="InArgument(x:String)" />
     <x:Property Name="accountName" Type="InArgument(x:String)" />
@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1045,4417</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1045,3365</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SearchAndGetTweets_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -129,7 +129,7 @@
       <AssemblyReference>UiPath.Twitter.IntegrationService.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SearchAndGetTweets" sap:VirtualizedContainerService.HintSize="860,4352" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SearchAndGetTweets" sap:VirtualizedContainerService.HintSize="860,3300" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="mention" />
       <Variable x:TypeArguments="x:String" Name="mentionDate" />
@@ -152,13 +152,13 @@
         <InArgument x:TypeArguments="x:Boolean">False</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Open Twitter" sap:VirtualizedContainerService.HintSize="798,4019" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="8a558b23-2078-42c6-91c8-43db0595037d" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Open Twitter" sap:VirtualizedContainerService.HintSize="798,2967" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="8a558b23-2078-42c6-91c8-43db0595037d" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Getting The Mentions" sap:VirtualizedContainerService.HintSize="764,3802" sap2010:WorkflowViewState.IdRef="Sequence_20">
+          <Sequence DisplayName="Getting The Mentions" sap:VirtualizedContainerService.HintSize="764,2750" sap2010:WorkflowViewState.IdRef="Sequence_20">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -175,9 +175,9 @@
                 <uix:TargetAnchorable BrowserURL="https://twitter.com/search?q=(%40playstation)%20until%3A2023-12-20%20since%3A2023-12-19&amp;src=recent_search_click" CvTextArea="749, 253, 46, 14" CvTextArgument="Latest" CvType="Text" DesignTimeRectangle="750, 235, 44, 52" DesignTimeScaleFactor="1" FriendlyName="'Latest'" FullSelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' class='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-majxgm r-1awozwy r-6koalj r-18u37iz r-1pi2tsx r-1777fci r-1l7z4oj r-95jzfe r-bnwqim' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' class='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-majxgm r-1awozwy r-6koalj r-18u37iz r-1pi2tsx r-1777fci r-1l7z4oj r-95jzfe r-bnwqim' type='' aaname='' check:text='Latest' /&gt;" Guid="38f43f06-46d0-4cae-b66d-816ddbca8c51" InformativeScreenshot="ce7fe2210656b4da3265ed5ff6d0ea7e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[isItOver = False]" DisplayName="Get Mentions Until It's Over" sap:VirtualizedContainerService.HintSize="702,3013" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[isItOver = False]" DisplayName="Get Mentions Until It's Over" sap:VirtualizedContainerService.HintSize="702,1961" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
               <ui:InterruptibleWhile.Body>
-                <Sequence sap:VirtualizedContainerService.HintSize="668,2877" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                <Sequence sap:VirtualizedContainerService.HintSize="668,1825" sap2010:WorkflowViewState.IdRef="Sequence_25">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="mentionComments" />
                     <Variable x:TypeArguments="x:String" Name="mentionRetweet" />
@@ -280,7 +280,7 @@
                       <uix:TargetAnchorable DesignTimeRectangle="619, 376, 566, 48" DesignTimeScaleFactor="1" FriendlyName="'11'" FullSelectorArgument="&lt;webctrl tag='DIV' class='*r-rull8r r-qklmqi' parentclass='*-175oi2r' parentid='react-root' /&gt;" Guid="56ba0dd6-f64c-44a4-b34e-91789e94e343" InformativeScreenshot="34047f90b3bf9276524e3809c81f7e3f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
                     </uix:NExtractData.Target>
                   </uix:NExtractData>
-                  <TryCatch DisplayName="Try Scraping Comments, Retweets and Likes Count" sap:VirtualizedContainerService.HintSize="626,1236" sap2010:WorkflowViewState.IdRef="TryCatch_21">
+                  <TryCatch DisplayName="Try Scraping Comments, Retweets and Likes Count" sap:VirtualizedContainerService.HintSize="626,184" sap2010:WorkflowViewState.IdRef="TryCatch_21">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -322,10 +322,10 @@
                       </Sequence>
                     </TryCatch.Try>
                     <TryCatch.Catches>
-                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="592,1073" sap2010:WorkflowViewState.IdRef="Catch`1_23">
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_23">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
