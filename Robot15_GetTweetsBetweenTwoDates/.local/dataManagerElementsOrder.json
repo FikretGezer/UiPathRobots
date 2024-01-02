@@ -92,6 +92,43 @@
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "SearchAndGetTweetsSecondVersion.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "url&Sequence_34",
+        "extractedCounts&Sequence_34",
+        "index&Sequence_1",
+        "tweet&Sequence_1",
+        "getTweetDate&Sequence_1",
+        "isItAll&Sequence_1",
+        "curRowIdx&Sequence_1",
+        "dt_Out&Sequence_1",
+        "getRetweetCount&Sequence_1",
+        "getLikeCount&Sequence_1",
+        "getCommentCount&Sequence_1",
+        "getViewCount&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "searchInput",
+        "accountName",
+        "dt_tweets",
+        "currentDate",
+        "previousDate"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CheckNumberValIsNull.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "numberVal"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
