@@ -1,0 +1,22 @@
+{
+  "assemblyStates": {
+    "C259AC33C44_Messages.yLh9b1UULcE1JAGc94E1VZ43": {
+      "namespace": "UiPath.IntegrationService.Activities.SWEntities.C259AC33C44_Messages_Create.Bundle",
+      "providerName": "CustomEntities",
+      "key": {
+        "name": "UiPath.IntegrationService.Activities.SWEntities.C259AC33C44_Messages_Create",
+        "hash": "MlJmdWQ3OGEwaVNRSU9UcG9QMVViVW92SyttTDUvRThHcEFXUVZnb2VBU3NoRjJNQ21TenV3RkVGSVVDZ0hUekhxTjVYTUVDcjNxUThWSE9qOXhlVkE9PQ",
+        "assemblyName": "C259AC33C44_Messages.yLh9b1UULcE1JAGc94E1VZ43"
+      }
+    },
+    "C259AC33C44_curated_.AkAg11Pog0L1cS9BN4e4Rt92": {
+      "namespace": "UiPath.IntegrationService.Activities.SWEntities.C259AC33C44_curated_whatsapp_message_Create.Bundle",
+      "providerName": "CustomEntities",
+      "key": {
+        "name": "UiPath.IntegrationService.Activities.SWEntities.C259AC33C44_curated_whatsapp_message_Create",
+        "hash": "RVpoR2xPUHE1QjJSdGlYWmhlMk56bDhyRTlXTG5pSEhoZjBTZUdmdzNSMWRYZ3QyKzc2YTFlV2JvOE83ZUhYWHhXYm5VdlpXNTlvbDdqNmJOVVhhcXc9PQ",
+        "assemblyName": "C259AC33C44_curated_.AkAg11Pog0L1cS9BN4e4Rt92"
+      }
+    }
+  }
+}

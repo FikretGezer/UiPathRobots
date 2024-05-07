@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1234,3355</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>714.4,3227.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetDates_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -48,6 +48,7 @@
       <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
       <x:String>UiPath.Mail.Activities.Business</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -103,9 +104,12 @@
       <AssemblyReference>System.CodeDom</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetDates" sap:VirtualizedContainerService.HintSize="724,3290" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetDates" sap:VirtualizedContainerService.HintSize="724.8,3162.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="deneme" />
       <Variable x:TypeArguments="x:Boolean" Name="isDateValid" />
@@ -115,9 +119,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[isDateValid = False]" DisplayName="Try Getting Start Date" sap:VirtualizedContainerService.HintSize="662,1304" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[isDateValid = False]" DisplayName="Try Getting Start Date" sap:VirtualizedContainerService.HintSize="662.4,1318.4" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,1167" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="624,1164" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="untilDate" />
           </Sequence.Variables>
@@ -126,8 +130,8 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Warning Message" sap:VirtualizedContainerService.HintSize="562,86" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;While writing dates please use this format,&quot;+Environment.NewLine+&#xD;&#xA;&quot;Month/Day/Year&quot;]" />
-          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Get Start Date" sap:VirtualizedContainerService.HintSize="562,243" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Write a Start Date" Title="Start Date">
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Warning Message" sap:VirtualizedContainerService.HintSize="561.6,125.6" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;While writing dates please use this format,&quot;+Environment.NewLine+&#xA;&quot;Month/Day/Year&quot;]" />
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Get Start Date" sap:VirtualizedContainerService.HintSize="561.6,281.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Write a Start Date" Title="Start Date">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[startDate]</OutArgument>
             </ui:InputDialog.Result>
@@ -228,7 +232,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Warning Message" sap:VirtualizedContainerService.HintSize="586,86" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;While writing dates please use this format,&quot;+Environment.NewLine+&#xD;&#xA;&quot;Month/Day/Year&quot;]" />
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Warning Message" sap:VirtualizedContainerService.HintSize="586,86" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;While writing dates please use this format,&quot;+Environment.NewLine+&#xA;&quot;Month/Day/Year&quot;]" />
           <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Get Previous Date" sap:VirtualizedContainerService.HintSize="586,243" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Write a Previous Date" Title="Previous Date">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[previousDate]</OutArgument>
