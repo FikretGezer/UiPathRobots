@@ -129,6 +129,24 @@
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "GetScreenshotsOfTweetsSecond.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "folderPath&Sequence_1",
+        "screenshotsFolderPath&Sequence_1",
+        "CurrentIndex&Sequence_11",
+        "screenshot&Sequence_9",
+        "screenshotPath&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "dt_Mentions",
+        "currentDate",
+        "accountName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
