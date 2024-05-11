@@ -11,8 +11,142 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "lastDate&Sequence_1",
+        "searchInput&Sequence_1",
+        "accountName&Sequence_1",
+        "previousDate&Sequence_1",
+        "dt_OutTweets&Sequence_1",
+        "accountNames&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GetAccNames.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "numberOfDays&Sequence_1",
+        "numberOfDaysInt&Sequence_1",
+        "countOfAccounts&Sequence_1",
+        "currentIndex&Sequence_1",
+        "currentAccountName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "accountNames"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GetDates.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "deneme&Sequence_1",
+        "isDateValid&Sequence_1",
+        "untilDate&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "lastDate"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SearchAndGetTweetsSecondVersion.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "exitLoop&Sequence_1",
+        "repostedText&Sequence_1",
+        "tweetDateToCompare&Sequence_34",
+        "pinnedText&Sequence_1",
+        "convertedDateStr&Sequence_34",
+        "convertedDate&Sequence_34",
+        "doesTweetDateExceed&Sequence_34",
+        "followAccountIndex&Sequence_66",
+        "accountURL&Sequence_1",
+        "followAccountAppeared&Sequence_1",
+        "tweet&Sequence_1",
+        "getTweetDate&Sequence_1",
+        "isItAll&Sequence_1",
+        "curRowIdx&Sequence_1",
+        "dt_Out&Sequence_1",
+        "getRetweetCount&Sequence_1",
+        "getLikeCount&Sequence_1",
+        "getCommentCount&Sequence_1",
+        "getViewCount&Sequence_1",
+        "index&Sequence_1",
+        "url&Sequence_34",
+        "extractedCounts&Sequence_34"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "lastDate",
+        "searchInput",
+        "accountName",
+        "dt_tweets"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GetScreenshotsOfTweetsSecond.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "folderPath&Sequence_1",
+        "screenshotsFolderPath&Sequence_1",
+        "CurrentIndex&Sequence_11",
+        "screenshot&Sequence_9",
+        "screenshotPath&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "dt_Mentions",
+        "currentDate",
+        "accountName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WriteDataInAnExcelFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_Tweets&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "accountName",
+        "dt_Out"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SearchAndGetTweets.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "getCommentCount&Sequence_1",
+        "getRetweetCount&Sequence_1",
+        "getLikeCount&Sequence_1",
+        "dt_Out&Sequence_1",
+        "extractedCounts&Sequence_1",
+        "getViewCount&Sequence_1",
+        "tweetDateToCompare&Sequence_1",
+        "repostedText&Sequence_1",
+        "getTweetDate&Sequence_1",
+        "tweet&Sequence_1",
+        "followAccountIndex&Sequence_5",
+        "url&Sequence_1",
+        "isItAll&Sequence_1",
+        "pinnedText&Sequence_1",
+        "followAccountAppeared&Sequence_1",
+        "index&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "searchInput",
+        "accountName",
+        "dt_tweets",
+        "lastDate"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
