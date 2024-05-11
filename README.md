@@ -15,6 +15,7 @@
 ### • [Robot 14: Creating Random CVs](#robot-14)
 ### • [Robot 15: Getting Tweets Between Two Dates](#robot-15)
 ### • [Robot 16: Get Twitter Mentions Between Two Dates](#robot-16)
+### • [Robot 17: Get Tweets In An Account](#robot-17)
 
 ## Robot 1: Clothing Consultant <a name="robot-1"></a>
 ### What This Robot Does?
@@ -395,3 +396,8 @@ Scrapes the data of the twitter mentions about an account that given by users an
     <img src="https://github.com/FikretGezer/UiPathRobots/assets/64322071/7a63782f-bef6-4d22-82ec-53663737c748" alt="" />
   </div>
 </div>
+
+## Robot 17: Get Tweets In An Account <a name="robot-17"></a>
+### What This Robot Does?
+Scrapes tweets in an account's profile until given date and write the data it gets in an Excel file.
+### Screenshots
