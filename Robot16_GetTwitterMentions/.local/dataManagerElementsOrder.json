@@ -107,6 +107,9 @@
       "Path": "SearchAndGetMentions-SecondVersion.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "endTime&Sequence_25",
+        "startTime&Sequence_25",
+        "isItReplyTweet&Sequence_1",
         "mention&Sequence_1",
         "mentionDate&Sequence_1",
         "mentionView&Sequence_1",
@@ -124,6 +127,37 @@
         "currentDate",
         "previousDate",
         "dt_mentions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SearchAndGetTweetsFinalVersion.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "index&Sequence_1",
+        "followAccountAppeared&Sequence_1",
+        "pinnedText&Sequence_1",
+        "isItAll&Sequence_1",
+        "url&Sequence_1",
+        "tweet&Sequence_1",
+        "getTweetDate&Sequence_1",
+        "repostedText&Sequence_1",
+        "tweetDateToCompare&Sequence_1",
+        "getViewCount&Sequence_1",
+        "extractedCounts&Sequence_1",
+        "dt_Out&Sequence_1",
+        "getLikeCount&Sequence_1",
+        "getRetweetCount&Sequence_1",
+        "getCommentCount&Sequence_1",
+        "isItReplyTweet&Sequence_1",
+        "followAccountIndex&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "lastDate",
+        "searchInput",
+        "accountName",
+        "dt_tweets"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

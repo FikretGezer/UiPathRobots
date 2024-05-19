@@ -58,64 +58,65 @@
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Drawing</AssemblyReference>
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
       <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Net.Mail</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>System.Private.Xml</AssemblyReference>
-      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
-      <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="SearchAndGetTweets" sap:VirtualizedContainerService.HintSize="568,3554" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -164,7 +165,7 @@
                 <uix:TargetAnchorable BrowserURL="https://twitter.com/search?q=(%40playstation)%20until%3A2023-12-20%20since%3A2023-12-19&amp;src=recent_search_click" CvTextArea="749, 253, 46, 14" CvTextArgument="Latest" CvType="Text" DesignTimeRectangle="750, 235, 44, 52" DesignTimeScaleFactor="1" FriendlyName="'Latest'" FullSelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' class='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-majxgm r-1awozwy r-6koalj r-18u37iz r-1pi2tsx r-1777fci r-1l7z4oj r-95jzfe r-bnwqim' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' class='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-majxgm r-1awozwy r-6koalj r-18u37iz r-1pi2tsx r-1777fci r-1l7z4oj r-95jzfe r-bnwqim' type='' aaname='' check:text='Latest' /&gt;" Guid="38f43f06-46d0-4cae-b66d-816ddbca8c51" InformativeScreenshot="ce7fe2210656b4da3265ed5ff6d0ea7e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="Get Mentions Until It's Over" sap:VirtualizedContainerService.HintSize="410,2215" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[isItOver = False]" DisplayName="Get Mentions Until It's Over" sap:VirtualizedContainerService.HintSize="410,2215" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
               <ui:InterruptibleWhile.Body>
                 <Sequence sap:VirtualizedContainerService.HintSize="376,2079" sap2010:WorkflowViewState.IdRef="Sequence_25">
                   <Sequence.Variables>
@@ -253,7 +254,7 @@
                         <uix:NGetText.Target>
                           <uix:TargetAnchorable BrowserURL="https://twitter.com/kitapkulubuyuz/status/1738117862986817919" CvTextArea="649, 482, 8, 11" CvType="AnyWordGroup" DesignTimeRectangle="650, 481, 8, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'5'" FullSelectorArgument="&lt;webctrl tag='SPAN' class='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3' parentclass='css-1qaijid r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-s1qlax' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' class='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3' parentclass='css-1qaijid r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-s1qlax' type='' /&gt;" Guid="3f0711f3-bc58-4367-9470-c6b485411009" InformativeScreenshot="cde6c947af6cd7c4bdda4420b1dd5e55.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target CvTextArea="649, 482, 284, 12" CvTextArgument="5 t7 9 86" CvType="Text" DesignTimeRectangle="619, 464, 566, 48" FriendlyName="'5986'" FullSelectorArgument="&lt;webctrl tag='DIV' class='css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-s1qlax r-2sztyj r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep r-1igl3o0 r-rull8r r-qklmqi' parentclass='css-175oi2r' parentid='react-root' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-s1qlax r-2sztyj r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep r-1igl3o0 r-rull8r r-qklmqi' parentclass='css-175oi2r' parentid='react-root' type='' aaname='' check:text='5986' /&gt;" SearchSteps="FuzzySelector" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
@@ -305,7 +306,7 @@
                         <uix:NGetText.Target>
                           <uix:TargetAnchorable BrowserURL="https://twitter.com/kitapkulubuyuz/status/1738117862986817919" CvTextArea="782, 482, 9, 11" CvType="AnyWordGroup" DesignTimeRectangle="783, 481, 8, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'9'" FullSelectorArgument="&lt;webctrl tag='SPAN' class='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3' parentclass='css-1qaijid r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-s1qlax' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' class='css-1qaijid r-bcqeeo r-qvutc0 r-poiln3' parentclass='css-1qaijid r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-s1qlax' type='' /&gt;" Guid="09fbcc57-eaea-4c92-a6cc-99bfb5e08e8e" InformativeScreenshot="c33886391ca5371c837825451b9119ea.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target CvTextArea="648, 482, 285, 12" CvTextArgument="4 t7 9 86" CvType="Text" DesignTimeRectangle="619, 464, 566, 48" FriendlyName="'5986'" FullSelectorArgument="&lt;webctrl tag='DIV' class='css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-s1qlax r-2sztyj r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep r-1igl3o0 r-rull8r r-qklmqi' parentclass='css-175oi2r' parentid='react-root' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-s1qlax r-2sztyj r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep r-1igl3o0 r-rull8r r-qklmqi' parentclass='css-175oi2r' parentid='react-root' type='' aaname='' check:text='5986' /&gt;" SearchSteps="FuzzySelector" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
@@ -357,7 +358,7 @@
                         <uix:NGetText.Target>
                           <uix:TargetAnchorable BrowserURL="https://twitter.com/gk19603187/status/1737606529225023521" CvTextArea="916, 362, 7, 11" CvType="AnyWordGroup" DesignTimeRectangle="913, 361, 21, 15" DesignTimeScaleFactor="1" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl tag='SPAN' class='css-1qaijid r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-s1qlax' parentclass='css-175oi2r r-xoduu5 r-1udh08x' parentid='id__05yj87ranpdx' idx='3' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' class='css-1qaijid r-qvutc0 r-poiln3 r-n6v787 r-1cwl3u0 r-1k6nrdp r-s1qlax' parentclass='css-175oi2r r-xoduu5 r-1udh08x' parentid='id__05yj87ranpdx' type='' aaname='' /&gt;" Guid="6d3aa4c8-37e8-434e-beb4-3513139d2476" InformativeScreenshot="bc19ad061663dd1c4112bae8eb4b560c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target CvTextArea="649, 362, 274, 11" CvTextArgument="1 t7 1" CvType="Text" DesignTimeRectangle="619, 344, 566, 48" FriendlyName="'11'" FullSelectorArgument="&lt;webctrl tag='DIV' class='css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-s1qlax r-2sztyj r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep r-1igl3o0 r-rull8r r-qklmqi' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='css-175oi2r r-1kbdv8c r-18u37iz r-1oszu61 r-3qxfft r-s1qlax r-2sztyj r-1efd50x r-5kkj8d r-h3s6tt r-1wtj0ep r-1igl3o0 r-rull8r r-qklmqi' type='' aaname='' check:text='11' /&gt;" SearchSteps="Selector, FuzzySelector" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
@@ -399,30 +400,22 @@
                   </TryCatch>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Check Number Val Is Null" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CheckNumberValIsNull.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InOutArgument x:TypeArguments="x:String" x:Key="numberVal">
-                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="mentionView" />
-                      </InOutArgument>
+                      <InOutArgument x:TypeArguments="x:String" x:Key="numberVal">[mentionView]</InOutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Check Number Val Is Null" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CheckNumberValIsNull.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InOutArgument x:TypeArguments="x:String" x:Key="numberVal">
-                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="mentionComments" />
-                      </InOutArgument>
+                      <InOutArgument x:TypeArguments="x:String" x:Key="numberVal">[mentionComments]</InOutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Check Number Val Is Null" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="CheckNumberValIsNull.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InOutArgument x:TypeArguments="x:String" x:Key="numberVal">
-                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="mentionRetweet" />
-                      </InOutArgument>
+                      <InOutArgument x:TypeArguments="x:String" x:Key="numberVal">[mentionRetweet]</InOutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Check Number Val Is Null" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="CheckNumberValIsNull.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InOutArgument x:TypeArguments="x:String" x:Key="numberVal">
-                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="mentionLike" />
-                      </InOutArgument>
+                      <InOutArgument x:TypeArguments="x:String" x:Key="numberVal">[mentionLike]</InOutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <uix:NGetUrl CurrentUrl="[mentionURL]" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="NGetUrl_3" Version="V3" />
@@ -486,9 +479,6 @@
                   </If>
                 </Sequence>
               </ui:InterruptibleWhile.Body>
-              <ui:InterruptibleWhile.Condition>
-                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="isItOver = False" />
-              </ui:InterruptibleWhile.Condition>
             </ui:InterruptibleWhile>
           </Sequence>
         </ActivityAction>
