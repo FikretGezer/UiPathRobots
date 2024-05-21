@@ -12,6 +12,9 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "mailAccountToSendIEnumerable&Sequence_1",
+        "isMailAddress&Sequence_1",
+        "mailAccountToSend&Sequence_1",
         "accountNames&Sequence_1",
         "searchInput&Sequence_1",
         "accountName&Sequence_1",
@@ -144,6 +147,34 @@
         "dt_Mentions",
         "currentDate",
         "accountName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SearchAndGetTweetsSecondVersionReworked.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "isItReplyTweet&Sequence_1",
+        "tweet&Sequence_1",
+        "getTweetDate&Sequence_1",
+        "isItAll&Sequence_1",
+        "curRowIdx&Sequence_1",
+        "dt_Out&Sequence_1",
+        "getRetweetCount&Sequence_1",
+        "getLikeCount&Sequence_1",
+        "getCommentCount&Sequence_1",
+        "getViewCount&Sequence_1",
+        "index&Sequence_1",
+        "url&Sequence_34",
+        "extractedCounts&Sequence_34"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "searchInput",
+        "accountName",
+        "dt_tweets",
+        "currentDate",
+        "previousDate"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
