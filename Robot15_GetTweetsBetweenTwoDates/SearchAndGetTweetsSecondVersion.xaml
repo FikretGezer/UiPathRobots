@@ -209,7 +209,7 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="Get All Tweets" sap:VirtualizedContainerService.HintSize="644.8,2516.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[isItAll = False]" DisplayName="Get All Tweets" sap:VirtualizedContainerService.HintSize="644.8,2516.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
               <ui:InterruptibleWhile.Body>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="611.2,2377.6" sap2010:WorkflowViewState.IdRef="Sequence_50">
                   <sap:WorkflowViewStateService.ViewState>
@@ -236,11 +236,11 @@
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayBefore="1" DisplayName="Press J To Select A Tweet" sap:VirtualizedContainerService.HintSize="449.6,218.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_13" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Shortcuts="[d(hk)]j[u(hk)]" Version="V3" />
-                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayBefore="1" DisplayName="Press Enter To See Full Tweet" sap:VirtualizedContainerService.HintSize="449.6,218.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_14" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="2" DelayBefore="2" DisplayName="Press J To Select A Tweet" sap:VirtualizedContainerService.HintSize="449.6,218.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_13" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Shortcuts="[d(hk)]j[u(hk)]" Version="V3" />
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Press Enter To See Full Tweet" sap:VirtualizedContainerService.HintSize="449.6,218.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_14" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V3" />
                         <TryCatch DisplayName="Check Is The Tweet Just A Picture" sap:VirtualizedContainerService.HintSize="449.6,428.8" sap2010:WorkflowViewState.IdRef="TryCatch_13">
                           <TryCatch.Try>
-                            <uix:NGetText DisplayName="Get Tweet" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_24" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" TextString="[tweet]" Timeout="5" Version="V3">
+                            <uix:NGetText DisplayName="Get Tweet" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_24" ScopeIdentifier="8a558b23-2078-42c6-91c8-43db0595037d" TextString="[tweet]" Version="V3">
                               <uix:NGetText.Target>
                                 <uix:TargetAnchorable BrowserURL="https://twitter.com/twitchflixmag/status/1736153943653396817" DesignTimeRectangle="619, 290, 566, 48" DesignTimeScaleFactor="1" FriendlyName="'Boğaziçi Bilişim'" FullSelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' parentclass='css-175oi2r r-1s2bzr4' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='react-root' tag='DIV' parentclass='css-175oi2r r-1s2bzr4' type='' class='css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-1inkyih r-16dba41 r-bnwqim r-135wba7' aaname='' /&gt;" Guid="97377465-0772-4bbf-a4a8-60765e4b4dec" ImageBase64="" InformativeScreenshot="b0803359e7905b415d911117072d521a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*X' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
                               </uix:NGetText.Target>
@@ -885,9 +885,6 @@
                   </TryCatch>
                 </Sequence>
               </ui:InterruptibleWhile.Body>
-              <ui:InterruptibleWhile.Condition>
-                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="isItAll = False" />
-              </ui:InterruptibleWhile.Condition>
             </ui:InterruptibleWhile>
           </Sequence>
         </ActivityAction>
