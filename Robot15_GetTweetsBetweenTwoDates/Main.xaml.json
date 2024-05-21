@@ -4,5 +4,18 @@
   "HelpLink": null,
   "Color": null,
   "OriginalIconFileName": null,
-  "Arguments": []
+  "Arguments": [
+    {
+      "Name": "SendMailConnections_4_Connection0",
+      "DisplayName": "SendMailConnections_4_Connection",
+      "Category": null,
+      "Tooltip": "Send Email (Must Provide an account before running the file)",
+      "Placeholder": null,
+      "Widget": "Connection",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 1,
+      "DataSourceItems": null
+    }
+  ]
 }
