@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="1524,3532" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="1524,3572" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau1="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -49,6 +49,9 @@
       <x:String>System.Activities.Runtime.Collections</x:String>
       <x:String>UiPath.Mail.Outlook.Activities</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Platform</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -118,9 +121,11 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Scraping Tweets From Given Account" sap:VirtualizedContainerService.HintSize="596,3467" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Scraping Tweets From Given Account" sap:VirtualizedContainerService.HintSize="596,3507" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="searchInput" />
       <Variable x:TypeArguments="x:String" Name="accountName" />
@@ -372,7 +377,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <TryCatch DisplayName="Try Catch Send Mail" sap:VirtualizedContainerService.HintSize="534,1099" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch Send Mail" sap:VirtualizedContainerService.HintSize="534,1139" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -380,7 +385,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="496,848" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence sap:VirtualizedContainerService.HintSize="496,888" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -418,41 +423,81 @@
               <InArgument x:TypeArguments="scg:IEnumerable(x:String)">[mailAccountToSend.Split(","c).AsEnumerable()]</InArgument>
             </Assign.Value>
           </Assign>
-          <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" ConnectionAccountName="{x:Null}" AttachmentInputMode="Builder" AttachmentPaths="{x:Null}" Attachments="{x:Null}" AuthScopesInvalid="False" Bcc="{x:Null}" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;{0}&lt;/SPAN&gt;&lt;SPAN&gt; &lt;/SPAN&gt;&lt;SPAN&gt;tarihine kadar &lt;/SPAN&gt;&lt;SPAN&gt;verilen hesaplardaki tweet bilgileri alınmıştır.İlgili tweetlere ekteki excel &amp;#252;zerinden ulaşabilirsiniz.&lt;/SPAN&gt;&lt;/P&gt;&quot;, lastDate)]" Cc="{x:Null}" ConnectionId="d887246e-11f2-49e9-80b2-25a2c7254866" ContinueOnError="{x:Null}" DisplayName="Send Email (Must Provide an account before running the file)" sap:VirtualizedContainerService.HintSize="434,576" sap2010:WorkflowViewState.IdRef="SendMailConnections_2" Importance="Normal" InputType="HTML" Mailbox="{x:Null}" ReplyTo="{x:Null}" SaveAsDraft="False" SingleAttachment="{x:Null}" Subject="Robot 17 Tweet Bilgileri" TextBody="{x:Null}" To="[mailAccountToSendIEnumerable]" UseConnectionService="True" UseSharedMailbox="False">
-            <umam:SendMailConnections.AttachmentList>
+          <ui:CommentOut DisplayName="Comment Out Send Mail With Outlook" sap:VirtualizedContainerService.HintSize="434,65" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,661" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;{0}&lt;/SPAN&gt;&lt;SPAN&gt; &lt;/SPAN&gt;&lt;SPAN&gt;tarihine kadar &lt;/SPAN&gt;&lt;SPAN&gt;verilen hesaplardaki tweet bilgileri alınmıştır.İlgili tweetlere ekteki excel &amp;#252;zerinden ulaşabilirsiniz.&lt;/SPAN&gt;&lt;/P&gt;&quot;, lastDate)]" ConnectionId="d887246e-11f2-49e9-80b2-25a2c7254866" DisplayName="Send Email (Must Provide an account before running the file)" sap:VirtualizedContainerService.HintSize="354,576" sap2010:WorkflowViewState.IdRef="SendMailConnections_2" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Robot 17 Tweet Bilgileri" To="[mailAccountToSendIEnumerable]" UseConnectionService="True" UseSharedMailbox="False">
+                  <umam:SendMailConnections.AttachmentList>
+                    <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
+                      <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath("Tweets.xlsx")]</InArgument>
+                    </scg:List>
+                  </umam:SendMailConnections.AttachmentList>
+                  <umam:SendMailConnections.AttachmentsBackup>
+                    <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Builder">
+                      <usau:BackupSlot.BackupValues>
+                        <scg:List x:TypeArguments="x:Object" x:Key="Existing" Capacity="1">
+                          <x:Null />
+                        </scg:List>
+                      </usau:BackupSlot.BackupValues>
+                    </usau:BackupSlot>
+                  </umam:SendMailConnections.AttachmentsBackup>
+                  <umam:SendMailConnections.InputTypeBackup>
+                    <usau:BackupSlot x:TypeArguments="umame:BodyInputType" StoredValue="HTML">
+                      <usau:BackupSlot.BackupValues>
+                        <scg:Dictionary x:TypeArguments="umame:BodyInputType, scg:List(x:Object)" />
+                      </usau:BackupSlot.BackupValues>
+                    </usau:BackupSlot>
+                  </umam:SendMailConnections.InputTypeBackup>
+                  <umam:SendMailConnections.MailboxBackup>
+                    <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" StoredValue="NoMailbox">
+                      <usau:BackupSlot.BackupValues>
+                        <scg:List x:TypeArguments="x:Object" x:Key="NoMailbox" Capacity="1">
+                          <x:Null />
+                        </scg:List>
+                        <scg:List x:TypeArguments="x:Object" x:Key="UseMailbox" Capacity="1">
+                          <x:Null />
+                        </scg:List>
+                      </usau:BackupSlot.BackupValues>
+                    </usau:BackupSlot>
+                  </umam:SendMailConnections.MailboxBackup>
+                </umam:SendMailConnections>
+              </Sequence>
+            </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:CommentOut>
+          <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;{0}&lt;/SPAN&gt;&lt;SPAN&gt; &lt;/SPAN&gt;&lt;SPAN&gt;tarihine kadar &lt;/SPAN&gt;&lt;SPAN&gt;verilen hesaplardaki tweet bilgileri alınmıştır.İlgili tweetlere ekteki excel &amp;#252;zerinden ulaşabilirsiniz.&lt;/SPAN&gt;&lt;/P&gt;&quot;, lastDate)]" ConnectionId="c55cef59-18e8-4758-a79d-aaf5d843b379" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,551" sap2010:WorkflowViewState.IdRef="SendEmailConnections_2" Importance="Normal" InputType="HTML" SaveAsDraft="True" Subject="Robot 17 Tweet Bilgileri" To="[New String(){&quot;mailAccountToSendIEnumerable&quot;}]" UseConnectionService="True">
+            <uga:SendEmailConnections.ArgumentAttachments>
               <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
                 <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath("Tweets.xlsx")]</InArgument>
               </scg:List>
-            </umam:SendMailConnections.AttachmentList>
-            <umam:SendMailConnections.AttachmentsBackup>
-              <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Builder">
-                <usau:BackupSlot.BackupValues>
-                  <scg:List x:TypeArguments="x:Object" x:Key="Existing" Capacity="1">
-                    <x:Null />
+            </uga:SendEmailConnections.ArgumentAttachments>
+            <uga:SendEmailConnections.AttachmentsBackup>
+              <usau1:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="Builder">
+                <usau1:BackupSlot.BackupValues>
+                  <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+                    <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
                   </scg:List>
-                </usau:BackupSlot.BackupValues>
-              </usau:BackupSlot>
-            </umam:SendMailConnections.AttachmentsBackup>
-            <umam:SendMailConnections.InputTypeBackup>
-              <usau:BackupSlot x:TypeArguments="umame:BodyInputType" StoredValue="HTML">
-                <usau:BackupSlot.BackupValues>
-                  <scg:Dictionary x:TypeArguments="umame:BodyInputType, scg:List(x:Object)" />
-                </usau:BackupSlot.BackupValues>
-              </usau:BackupSlot>
-            </umam:SendMailConnections.InputTypeBackup>
-            <umam:SendMailConnections.MailboxBackup>
-              <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" StoredValue="NoMailbox">
-                <usau:BackupSlot.BackupValues>
-                  <scg:List x:TypeArguments="x:Object" x:Key="NoMailbox" Capacity="1">
-                    <x:Null />
-                  </scg:List>
-                  <scg:List x:TypeArguments="x:Object" x:Key="UseMailbox" Capacity="1">
-                    <x:Null />
-                  </scg:List>
-                </usau:BackupSlot.BackupValues>
-              </usau:BackupSlot>
-            </umam:SendMailConnections.MailboxBackup>
-          </umam:SendMailConnections>
+                </usau1:BackupSlot.BackupValues>
+              </usau1:BackupSlot>
+            </uga:SendEmailConnections.AttachmentsBackup>
+            <uga:SendEmailConnections.InputTypeBackup>
+              <usau1:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+                <usau1:BackupSlot.BackupValues>
+                  <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                </usau1:BackupSlot.BackupValues>
+              </usau1:BackupSlot>
+            </uga:SendEmailConnections.InputTypeBackup>
+          </uga:SendEmailConnections>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>

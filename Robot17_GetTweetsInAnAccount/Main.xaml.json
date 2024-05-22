@@ -6,10 +6,10 @@
   "OriginalIconFileName": null,
   "Arguments": [
     {
-      "Name": "SendMailConnections_2_Connection0",
-      "DisplayName": "SendMailConnections_2_Connection",
+      "Name": "SendEmailConnections_2_Connection0",
+      "DisplayName": "SendEmailConnections_2_Connection",
       "Category": null,
-      "Tooltip": "Send Email (Must Provide an account before running the file)",
+      "Tooltip": "Send Email",
       "Placeholder": null,
       "Widget": "Connection",
       "IsRequired": true,
