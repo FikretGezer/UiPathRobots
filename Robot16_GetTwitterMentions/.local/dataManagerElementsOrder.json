@@ -12,7 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "mailAccountToSendIEnumerable&Sequence_19",
+        "mailAccountToSendIEnumerable&Sequence_8",
         "isMailAddress&Sequence_8",
         "mailAccountToSend&Sequence_8",
         "searchInput&Sequence_8",
