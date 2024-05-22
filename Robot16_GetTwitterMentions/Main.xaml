@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="1524,3364" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau1="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="1524,4177" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau1="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -115,9 +115,13 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
       <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Scraping Tweets From Given Account" sap:VirtualizedContainerService.HintSize="784,3299" sap2010:WorkflowViewState.IdRef="Sequence_8">
+  <Sequence DisplayName="Scraping Tweets From Given Account" sap:VirtualizedContainerService.HintSize="784,4112" sap2010:WorkflowViewState.IdRef="Sequence_8">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="searchInput" />
       <Variable x:TypeArguments="x:String" Name="accountName" />
@@ -136,21 +140,21 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Warning" sap:VirtualizedContainerService.HintSize="722,125" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Before you continue, &quot; + Environment.NewLine +&#xA;&quot;Please make sure you login any  account.&quot;]" />
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[isMailAddress = False]" DisplayName="While (Get Email Account To Send Tweet Excel)" sap:VirtualizedContainerService.HintSize="722,1215" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Warning" sap:VirtualizedContainerService.HintSize="722,126" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Before you continue, &quot; + Environment.NewLine +&#xA;&quot;Please make sure you login any  account.&quot;]" />
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[isMailAddress = False]" DisplayName="While (Get Email Account To Send Tweet Excel)" sap:VirtualizedContainerService.HintSize="722,1223" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="688,1061" sap2010:WorkflowViewState.IdRef="Sequence_14">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="688,1068" sap2010:WorkflowViewState.IdRef="Sequence_14">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Get Mail Address To Send" sap:VirtualizedContainerService.HintSize="626,279" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Alınan tweetlerin Excel dosyası mail olarak belirtilen hesaba atılacaktır. Bu yüzden mail atılacak adresi giriniz: " Title="Mail Atılacak Adres">
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Get Mail Address To Send" sap:VirtualizedContainerService.HintSize="626,283" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Alınan tweetlerin Excel dosyası mail olarak belirtilen hesaba atılacaktır. Bu yüzden mail atılacak adresi giriniz: " Title="Mail Atılacak Adres">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[mailAccountToSend]</OutArgument>
             </ui:InputDialog.Result>
           </ui:InputDialog>
-          <If Condition="[mailAccountToSend.Contains(&quot;@&quot;)]" DisplayName="Check is mail address is correct" sap:VirtualizedContainerService.HintSize="626,697" sap2010:WorkflowViewState.IdRef="If_3">
+          <If Condition="[mailAccountToSend.Contains(&quot;@&quot;)]" DisplayName="Check is mail address is correct" sap:VirtualizedContainerService.HintSize="626,700" sap2010:WorkflowViewState.IdRef="If_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -158,21 +162,21 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,486" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,488" sap2010:WorkflowViewState.IdRef="Sequence_17">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[mailAccountToSend.Split(&quot;@&quot;)(1) = &quot;outlook.com&quot; Or&#xA;mailAccountToSend.Split(&quot;@&quot;)(1) = &quot;gmail.com&quot;]" sap:VirtualizedContainerService.HintSize="530,401" sap2010:WorkflowViewState.IdRef="If_4">
+                <If Condition="[mailAccountToSend.Split(&quot;@&quot;)(1) = &quot;outlook.com&quot; Or&#xA;mailAccountToSend.Split(&quot;@&quot;)(1) = &quot;gmail.com&quot;]" sap:VirtualizedContainerService.HintSize="530,403" sap2010:WorkflowViewState.IdRef="If_4">
                   <If.Then>
-                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,190" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,191" sap2010:WorkflowViewState.IdRef="Sequence_15">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Break the loop" sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_13">
+                      <Assign DisplayName="Break the loop" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_13">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Boolean">[isMailAddress]</OutArgument>
                         </Assign.To>
@@ -215,20 +219,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InterruptibleWhile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Account Names" sap:VirtualizedContainerService.HintSize="722,153" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="GetAccNames.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Account Names" sap:VirtualizedContainerService.HintSize="722,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="GetAccNames.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:String" x:Key="accountNames">[accountNames]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:LogMessage DisplayName="Log Names" sap:VirtualizedContainerService.HintSize="722,181" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[accountNames]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Dates" sap:VirtualizedContainerService.HintSize="722,153" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="GetDates.xaml">
+    <ui:LogMessage DisplayName="Log Names" sap:VirtualizedContainerService.HintSize="722,183" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[accountNames]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Dates" sap:VirtualizedContainerService.HintSize="722,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="GetDates.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:String" x:Key="startDate">[currentDate]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="previousDate">[previousDate]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:LogMessage DisplayName="Log Dates" sap:VirtualizedContainerService.HintSize="722,181" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[currentDate+&quot;, &quot;+previousDate]" />
-    <Assign DisplayName="Change format of the current date" sap:VirtualizedContainerService.HintSize="722,122" sap2010:WorkflowViewState.IdRef="Assign_7">
+    <ui:LogMessage DisplayName="Log Dates" sap:VirtualizedContainerService.HintSize="722,183" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[currentDate+&quot;, &quot;+previousDate]" />
+    <Assign DisplayName="Change format of the current date" sap:VirtualizedContainerService.HintSize="722,123" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[currentDate]</OutArgument>
       </Assign.To>
@@ -236,7 +240,7 @@
         <InArgument x:TypeArguments="x:String">[DateTime.Parse(currentDate).ToString("yyyy-MM-dd")]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign DisplayName="Change format of the previous date" sap:VirtualizedContainerService.HintSize="722,122" sap2010:WorkflowViewState.IdRef="Assign_8">
+    <Assign DisplayName="Change format of the previous date" sap:VirtualizedContainerService.HintSize="722,123" sap2010:WorkflowViewState.IdRef="Assign_8">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[previousDate]</OutArgument>
       </Assign.To>
@@ -244,15 +248,15 @@
         <InArgument x:TypeArguments="x:String">[DateTime.Parse(previousDate).ToString("yyyy-MM-dd")]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[String.IsNullOrWhiteSpace(searchOption)]" DisplayName="Make sure user select an option" sap:VirtualizedContainerService.HintSize="722,554" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[String.IsNullOrWhiteSpace(searchOption)]" DisplayName="Make sure user select an option" sap:VirtualizedContainerService.HintSize="722,560" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,400" sap2010:WorkflowViewState.IdRef="Sequence_9">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,405" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InputDialog Options="{x:Null}" DisplayName="Choose Search Option" sap:VirtualizedContainerService.HintSize="354,315" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="Choose the search option" OptionsString="1-Scrape the mentions (@accountname);2-Scrape everything about a word" Title="Search Option">
+          <ui:InputDialog Options="{x:Null}" DisplayName="Choose Search Option" sap:VirtualizedContainerService.HintSize="354,320" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="Choose the search option" OptionsString="1-Scrape the mentions (@accountname);2-Scrape everything about a word" Title="Search Option">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[searchOption]</OutArgument>
             </ui:InputDialog.Result>
@@ -374,7 +378,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <TryCatch DisplayName="Try Catch Send Mail" sap:VirtualizedContainerService.HintSize="722,340" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch Send Mail" sap:VirtualizedContainerService.HintSize="722,1130" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -382,7 +386,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Sequence Send With Outlook" sap:VirtualizedContainerService.HintSize="496,888" sap2010:WorkflowViewState.IdRef="Sequence_19">
+        <Sequence DisplayName="Sequence Send With Outlook" sap:VirtualizedContainerService.HintSize="496,874" sap2010:WorkflowViewState.IdRef="Sequence_19">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -412,7 +416,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:CommentOut>
-          <Assign sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Assign_14">
+          <Assign sap:VirtualizedContainerService.HintSize="434,123" sap2010:WorkflowViewState.IdRef="Assign_14">
             <Assign.To>
               <OutArgument x:TypeArguments="scg:IEnumerable(x:String)">[mailAccountToSendIEnumerable]</OutArgument>
             </Assign.To>
@@ -428,7 +432,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;{0}&lt;/SPAN&gt;&lt;SPAN&gt; &lt;/SPAN&gt;&lt;SPAN&gt;&amp;lt;&lt;/SPAN&gt;&lt;SPAN&gt;-&lt;/SPAN&gt;&lt;SPAN&gt;&amp;gt;&lt;/SPAN&gt;&lt;SPAN&gt; &lt;/SPAN&gt;&lt;SPAN&gt;{1}&lt;/SPAN&gt;&lt;SPAN&gt; arasındaki tarihlerde verilen hesaplardaki tweet bilgileri alınmıştır.İlgili tweetlere ekteki excel &amp;#252;zerinden ulaşabilirsiniz.&lt;/SPAN&gt;&lt;/P&gt;&quot;, currentDate, previousDate)]" ConnectionId="d887246e-11f2-49e9-80b2-25a2c7254866" DisplayName="Send Email (Must Provide an account before running the file)" sap:VirtualizedContainerService.HintSize="354,576" sap2010:WorkflowViewState.IdRef="SendMailConnections_2" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Robot 16 Tweet Bilgileri" To="[mailAccountToSendIEnumerable]" UseConnectionService="True" UseSharedMailbox="False">
+                <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" ConnectionAccountName="{x:Null}" AttachmentInputMode="Builder" AttachmentPaths="{x:Null}" Attachments="{x:Null}" AuthScopesInvalid="False" Bcc="{x:Null}" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;{0}&lt;/SPAN&gt;&lt;SPAN&gt; &lt;/SPAN&gt;&lt;SPAN&gt;&amp;lt;&lt;/SPAN&gt;&lt;SPAN&gt;-&lt;/SPAN&gt;&lt;SPAN&gt;&amp;gt;&lt;/SPAN&gt;&lt;SPAN&gt; &lt;/SPAN&gt;&lt;SPAN&gt;{1}&lt;/SPAN&gt;&lt;SPAN&gt; arasındaki tarihlerde verilen hesaplardaki tweet bilgileri alınmıştır.İlgili tweetlere ekteki excel &amp;#252;zerinden ulaşabilirsiniz.&lt;/SPAN&gt;&lt;/P&gt;&quot;, currentDate, previousDate)]" Cc="{x:Null}" ConnectionId="d887246e-11f2-49e9-80b2-25a2c7254866" ContinueOnError="{x:Null}" DisplayName="Send Email (Must Provide an account before running the file)" sap:VirtualizedContainerService.HintSize="354,576" sap2010:WorkflowViewState.IdRef="SendMailConnections_2" Importance="Normal" InputType="HTML" Mailbox="{x:Null}" ReplyTo="{x:Null}" SaveAsDraft="False" SingleAttachment="{x:Null}" Subject="Robot 16 Tweet Bilgileri" TextBody="{x:Null}" To="[mailAccountToSendIEnumerable]" UseConnectionService="True" UseSharedMailbox="False">
                   <umam:SendMailConnections.AttachmentList>
                     <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
                       <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath("Mentions.xlsx")]</InArgument>
@@ -472,7 +476,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:CommentOut>
-          <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ConnectionAccountName="{x:Null}" AttachmentInputMode="Builder" AttachmentPaths="{x:Null}" Attachments="{x:Null}" AuthScopesInvalid="False" Bcc="{x:Null}" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;{0}&lt;/SPAN&gt;&lt;SPAN&gt; &lt;/SPAN&gt;&lt;SPAN&gt;&amp;lt;&lt;/SPAN&gt;&lt;SPAN&gt;-&lt;/SPAN&gt;&lt;SPAN&gt;&amp;gt;&lt;/SPAN&gt;&lt;SPAN&gt; &lt;/SPAN&gt;&lt;SPAN&gt;{1}&lt;/SPAN&gt;&lt;SPAN&gt; arasındaki tarihlerde verilen hesaplardaki tweet bilgileri alınmıştır.İlgili tweetlere ekteki excel &amp;#252;zerinden ulaşabilirsiniz.&lt;/SPAN&gt;&lt;/P&gt;&quot;, currentDate, previousDate)]" Cc="{x:Null}" ConnectionId="c55cef59-18e8-4758-a79d-aaf5d843b379" ContinueOnError="{x:Null}" DisplayName="Send Gmail (Must Provide an account before running the file)" sap:VirtualizedContainerService.HintSize="434,551" sap2010:WorkflowViewState.IdRef="SendEmailConnections_2" Importance="Normal" InputType="HTML" ReplyTo="{x:Null}" SaveAsDraft="False" SingleAttachment="{x:Null}" Subject="Robot 16 Tweet Bilgileri" TextBody="{x:Null}" To="[New String(){&quot;mailAccountToSendIEnumerable&quot;}]" UseConnectionService="True">
+          <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;{0}&lt;/SPAN&gt;&lt;SPAN&gt; &lt;/SPAN&gt;&lt;SPAN&gt;&amp;lt;&lt;/SPAN&gt;&lt;SPAN&gt;-&lt;/SPAN&gt;&lt;SPAN&gt;&amp;gt;&lt;/SPAN&gt;&lt;SPAN&gt; &lt;/SPAN&gt;&lt;SPAN&gt;{1}&lt;/SPAN&gt;&lt;SPAN&gt; arasındaki tarihlerde verilen hesaplardaki tweet bilgileri alınmıştır.İlgili tweetlere ekteki excel &amp;#252;zerinden ulaşabilirsiniz.&lt;/SPAN&gt;&lt;/P&gt;&quot;, currentDate, previousDate)]" ConnectionId="c55cef59-18e8-4758-a79d-aaf5d843b379" DisplayName="Send Gmail (Must Provide an account before running the file)" sap:VirtualizedContainerService.HintSize="434,536" sap2010:WorkflowViewState.IdRef="SendEmailConnections_2" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Robot 16 Tweet Bilgileri" To="[mailAccountToSendIEnumerable]" UseConnectionService="True">
             <uga:SendEmailConnections.ArgumentAttachments>
               <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
                 <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath("Mentions.xlsx")]</InArgument>
@@ -498,10 +502,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,155" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500,23" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
